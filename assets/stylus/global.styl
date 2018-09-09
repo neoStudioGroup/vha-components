@@ -1,0 +1,152 @@
+// 全局样式
+
+// 所有UI组件
+*[class*="UI-"]{
+  // border: 1px solid red !important;
+  // box-sizing: border-box !important;
+}
+// 所有UI组件-所有子元素
+*[class*="UI-"] *{
+  // border: 1px solid green !important;
+  // box-sizing: border-box !important;
+}
+// 所有UI组件-子元素
+*[class*="UI-"] *[class*="ui-"]{
+  // border: 1px solid blue !important;
+  // box-sizing: border-box !important;
+}
+
+// ------------------------- 公共属性 -------------------------
+
+._cl-000 {color: #000}
+._cl-f63f3f {color: #f63f3f !important}
+._cl-0173fb {color: #0173fb}
+._cl-3c3e45 {color: #3c3e45}
+._bc-fff {background-color: #fff}
+._bc-f63f3f {background-color: #f63f3f}
+._bc-161618 {background-color: #161618}
+._bdc-f1f1f1 {border-color: #f1f1f1}
+
+._pa {position: absolute}
+._pr {position: relative}
+._fl {float: left}
+._fr {float: right}
+._tl {text-align: left}
+._tc {text-align: center}
+._tr {text-align: right}
+._nomg {margin: 0 !important}
+._nopd {padding: 0 !important}
+._nobd {border: 0px !important}
+
+._patlw
+  position absolute
+  top 0
+  left 0
+  width 100%
+
+/*强制不换行*/
+._wn {white-space: nowrap}
+/*盒子*/
+._df {display: flex}
+/*内联盒子*/
+._dif {display: inline-flex}
+/*垂直方向*/
+._fc {flex-direction: column}
+/*平均分布*/
+._js {justify-content: space-around}
+/*内容垂直对齐*/
+._ac {align-items: center}
+/*内容水平对齐*/
+._jc {justify-content: center}
+/*子元素水平对齐*/
+._m0a {margin: 0 auto}
+
+/*内容垂直分布居中*/
+._dfjcsb{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/*内容垂直对齐*/
+._dfac{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+/*内容水平对齐*/
+._dfjc{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/*垂直水平居中*/
+._dfacjc{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/*垂直水平居中2*/
+._dfacjcb{
+  margin: auto
+}
+
+/*居底*/
+._dfai{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/*超出隐藏*/
+._oh{
+  overflow: hidden;
+}
+/*去掉文字省略号*/
+._noRowHide{
+  display: inline-block;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: clip;
+}
+/*文字一行省略号*/
+._ownRowHide{
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*文字二行省略号*/
+._twoRowHide{
+	// line-height: 12px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* autoprefixer: off*/
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on*/
+	word-break: break-all;
+}
+
+// ------------------------- 公共组件 -------------------------
+
+// 公共组件-容器
+._content
+  margin 0 auto
+  width 100%
+  min-width 320px
+  max-width 540px
+  background-color #fff
+
+
+
+// 清除浮动
+._clear{clear:both; height: 0; line-height: 0; font-size: 0}

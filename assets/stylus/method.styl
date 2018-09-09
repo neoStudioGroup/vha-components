@@ -1,0 +1,45 @@
+
+// ------------------------- 公共方法 -------------------------
+border-1px-top($color)
+  position: relative
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    display: block
+    pointer-events: none;
+    content: ' '
+    border-top: 1px solid $color
+    @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+      transform: scaleY(0.7)
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+      transform: scaleY(0.5)
+
+border-1px($color)
+  position: relative
+  &::after
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    display: block
+    pointer-events: none;
+    content: ' '
+    border-top: 1px solid $color
+    @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+      transform: scaleY(0.7)
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+      transform: scaleY(0.5)
+
+vw($px)
+  ($px / 2 / 375) * 100vw
+
+rem($px)
+  ($px / 2 / 75 ) * 1rem
+
+w-px($px)
+  "calc(100% - %s)" % rem($px)
+
+h-px($px)
+  "calc(100vh - %s)" % rem($px)

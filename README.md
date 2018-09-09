@@ -1,3 +1,5 @@
 # vha-components
-vha-简单组件
-Coming.....
+
+Coming soon...
+
+可以和任何组件库搭配使用的基础hybrid app组件库

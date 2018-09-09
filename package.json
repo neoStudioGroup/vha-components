@@ -1,6 +1,6 @@
 {
   "name": "vha-components",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Vue hybrid app components",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neoStudioGroup/vha.git"
+    "url": "git+https://github.com/neoStudioGroup/vha-components.git"
   },
   "author": "neoStudioGroup",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/neoStudioGroup/vha/issues"
+    "url": "https://github.com/neoStudioGroup/vha-components/issues"
   },
-  "homepage": "https://github.com/neoStudioGroup/vha#readme"
+  "homepage": "https://github.com/neoStudioGroup/vha-components#readme"
 }
