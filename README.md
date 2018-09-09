@@ -10,3 +10,9 @@ npm install vha-components --save
 ```
 
 
+```javascript
+// import
+import Vue from 'vue'
+import VueComponents from 'vha-components'
+Vue.use(VueComponents)
+```
