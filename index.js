@@ -5,8 +5,8 @@ import vhaScrollview from "./components/vha_UI-scrollview"
 import vhaButton from "./components/vha_UI-button"
 import vhaTabs from "./components/vha_UI-tabs"
 
-import './assets/stylus/reset.css'
-import './assets/css/global.css'
+import './assets/stylus/reset.styl'
+import './assets/stylus/global.styl'
 
 const vha = {
   install(Vue) {
