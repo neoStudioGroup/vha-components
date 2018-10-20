@@ -174,9 +174,8 @@
       ._bdc-info
         font-weight bold
   
-  
   //UI组件-侧边栏
-  ._UI-Sidebar
+  ._UI-sidebar
     padding 20px
     .ui-s-phone
       padding 90px 12px
@@ -189,7 +188,6 @@
         width 375px
         height 667px
 
-
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 <template>
@@ -198,7 +196,7 @@
     <div class="_UI-menu _df _fdc">
       <div class="ui-l-title _df _aic _cl-fff" @click="$router.push('/')">
         <i class="fa fa-mobile-phone fa-2x"></i>
-        <span class="_di">Native docs</span>
+        <span class="_di">Components docs</span>
       </div>
       <div class="ui-l-search">
         <input class="_reInput" placeholder="Search" />
@@ -260,9 +258,9 @@
       <router-view></router-view>
     </div>
     <!-- UI组件-侧边栏 -->
-    <div class="_UI-Sidebar">
+    <div class="_UI-sidebar" v-if="$store.state.showSidebar">
       <div class="ui-s-phone">
-        <iframe src="https://neostudiogroup.github.io/vha-appDemo/" frameborder="0"></iframe>
+        <iframe :src="iframeSrc" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -277,6 +275,7 @@ export default {
   data() {
     //动态数据
     return {
+      iframeSrc: ''
     }
   },
   components: {
@@ -374,6 +373,21 @@ export default {
         event.preventDefault()
       })
     })
+    
+    //自适应侧边栏iframe src
+    if (this.$store.state.showSidebar) {
+      // 分割被去除的路由组
+      let temp_outRouter = this.$store.state.showSideOutrouter.split(",")
+      temp_outRouter.forEach(element => {
+        let temp_path = this.$router.history.current.path.replace(/\//g,'')
+        // 如果在被去除的路由组找到当前路径名,就不显示
+        if (element === temp_path) {
+          this.$store.state.showSidebar = false
+        }
+      })
+      // this.iframeSrc = this.$store.state.showSidebarSrc
+      this.iframeSrc += this.$store.state.showSidebarSrc + this.$router.history.current.path.replace(/\//g,'')
+    }
     
   },
   beforeDestroy() {

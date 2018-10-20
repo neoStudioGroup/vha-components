@@ -22,6 +22,9 @@ Vue.mixin({
 
 export default new Vuex.Store({
   state: {
+    showSidebar: true, 
+    showSideOutrouter: 'GettingStarted,Authentication', 
+    showSidebarSrc: 'https://neostudiogroup.github.io/vha-appDemo/', 
     menus: [
       {
         title: 'Documentation',
@@ -80,48 +83,35 @@ export default new Vuex.Store({
         ]
       },
       {
-        title: 'Apis',
+        title: '基础 Base',
         list: [
-          {
-            text: '/books',
-            note: 'POST',
-            noteClass: '_cl-66bb6a',
-            href: '#',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '/books',
-            note: 'POST',
-            noteClass: '_cl-42a5f5',
-            href: '#',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '/books/:id',
-            note: 'PUT',
-            noteClass: '_cl-7e57c2',
-            href: '#',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '/books/:id',
-            note: 'DELETE',
-            noteClass: '_cl-ff7043',
-            href: '#',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          }
+{text: '导航栏', note: 'NavBar', noteClass: '', href: '/NavBar', select: false, showItem: false, item: []},
+{text: '分段器', note: 'Segment', noteClass: '', href: '/Segment', select: false, showItem: false, item: []},
+{text: '导航栏', note: 'NavBar', noteClass: '', href: '/NavBar', select: false, showItem: false, item: []},
+{text: '滚动区域', note: 'ScrollView', noteClass: '', href: '/ScrollView', select: false, showItem: false, item: []}
+        ]
+      },
+      {
+        title: '数据输入 Data Entry',
+        list: [
+{text: '按钮', note: 'Button', noteClass: '', href: '/Button', select: false, showItem: false, item: []},
+{text: '滑动开关', note: 'Switch', noteClass: '', href: '/Switch', select: false, showItem: false, item: []},
+{text: '滑块条', note: 'Slider', noteClass: '', href: '/Slider', select: false, showItem: false, item: []},
+{text: '步进器', note: 'Stepper', noteClass: '', href: '/Stepper', select: false, showItem: false, item: []}
+        ]
+      },
+      {
+        title: '数据显示 Data Display',
+        list: [
+{text: '轮播图', note: 'Swipe', noteClass: '', href: '/Swipe', select: false, showItem: false, item: []},
+{text: '卡片', note: 'Card', noteClass: '', href: '/Card', select: false, showItem: false, item: []}
+        ]
+      },
+      {
+        title: '反馈操作 Feedback',
+        list: [
+{text: '上拉菜单', note: 'ActionSheet', noteClass: '', href: '/ActionSheet', select: false, showItem: false, item: []},
+{text: '加载对话框', note: 'Loading', noteClass: '', href: '/Loading', select: false, showItem: false, item: []}
         ]
       }
     ]

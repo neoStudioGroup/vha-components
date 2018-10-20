@@ -4,7 +4,7 @@
   .ui-l-i-title
     margin 8px 20px
     // line-height 1em
-    font-size 1rem
+    font-size 1.1em
     font-weight 700
     letter-spacing 1px
     color #666
