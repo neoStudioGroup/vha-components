@@ -173,6 +173,22 @@
         border-radius 2px
       ._bdc-info
         font-weight bold
+  
+  
+  //UI组件-侧边栏
+  ._UI-Sidebar
+    padding 20px
+    .ui-s-phone
+      padding 90px 12px
+      height 100%
+      font-size 0
+      background-image url('../assets/images/phone-case.png')
+      background-repeat no-repeat
+      background-size 100%
+      iframe
+        width 375px
+        height 667px
+
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
@@ -242,6 +258,12 @@
     <!-- UI组件-右侧内容 -->
     <div class="_UI-content _flexYauto">
       <router-view></router-view>
+    </div>
+    <!-- UI组件-侧边栏 -->
+    <div class="_UI-Sidebar">
+      <div class="ui-s-phone">
+        <iframe src="https://neostudiogroup.github.io/vha-appDemo/" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </template>
