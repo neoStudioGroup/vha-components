@@ -29,7 +29,7 @@ module.exports = {
           }
           let temp_title = titles[context.route]
           if (!temp_title) {
-            temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' 静态文档博客'
+            temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' vha-components 文档'
           }
           return context.html.replace(
             /<title>[^<]*<\/title>/i,
