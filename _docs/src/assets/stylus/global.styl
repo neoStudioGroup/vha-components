@@ -1,4 +1,4 @@
-// 全局样式
+// 全局样式 - 只放通用class
 
 // 所有UI组件
 *[class*="UI-"]{
@@ -18,15 +18,34 @@
 
 // ------------------------- 公共属性 -------------------------
 
-._cl-000 {color: #000}
+
+._cl-000 {color: #000 !important}
+._cl-fff {color: #fff !important}
 ._cl-f63f3f {color: #f63f3f !important}
-._cl-0173fb {color: #0173fb}
-._cl-3c3e45 {color: #3c3e45}
-._bc-fff {background-color: #fff}
-._bc-f63f3f {background-color: #f63f3f}
-._bc-161618 {background-color: #161618}
-._bc-f0f2f5 {background-color: #f0f2f5}
-._bdc-f1f1f1 {border-color: #f1f1f1}
+._cl-0173fb {color: #0173fb !important}
+._cl-3c3e45 {color: #3c3e45 !important}
+  
+._cl-aaaaaa {color: #aaaaaa !important}
+._cl-1890ff {color: #1890ff !important}
+._cl-66bb6a {color: #66bb6a !important}
+._cl-42a5f5 {color: #42a5f5 !important}
+._cl-7e57c2 {color: #7e57c2 !important}
+._cl-ff7043 {color: #ff7043 !important}
+// ---
+._bc-000 {background-color: #000 !important}
+._bc-fff {background-color: #fff !important}
+._bc-f63f3f {background-color: #f63f3f !important}
+._bc-0173fb {background-color: #0173fb !important}
+._bc-3c3e45 {background-color: #3c3e45 !important}
+// ---
+._bdc-000 {border-color: #000 !important}
+._bdc-fff {border-color: #fff !important}
+
+._bdc-success {border-color: #66cc00 !important}
+._bdc-info {border-color: #56adec !important}
+._bdc-warning {border-color: #ffc107 !important}
+._bdc-error {border-color: #ff2200 !important}
+
 
 ._pa {position: absolute}
 ._pr {position: relative}
@@ -37,7 +56,7 @@
 ._tr {text-align: right}
 ._nomg {margin: 0 !important}
 ._nopd {padding: 0 !important}
-._nobd {border: 0px !important}
+._nobd {border: 0 !important}
 
 ._patlw
   position absolute
@@ -45,112 +64,131 @@
   left 0
   width 100%
 
-/*强制不换行*/
-._wn {white-space: nowrap}
-/*盒子*/
-._df {display: flex}
-._dif {display: inline-flex}
-/*内联盒子*/
-._dif {display: inline-flex}
-/*垂直方向*/
-._fdc {flex-direction: column}
-/*盒子水平自动宽度*/
+// 内联元素
+._di {display: inline;}
+// 块元素
+._db {display: block;}
+// 内联块元素
+._dib {display: inline-block;}
+// 内容超出隐藏
+._oh {overflow: hidden;}
+
+
+// ========== 盒子常用 ========== start
+// 盒子
+._df {display: flex;}
+// 内联盒子
+._dif {display: inline-flex;}
+// 水平方向轴线 (默认)
+._fdr {flex-direction: row;}
+// 垂直方向轴线
+._fdc {flex-direction: column;}
+// 盒子水平自动宽度撑满
 ._flexXauto {
-  max-width 100%
-  overflow-x auto
-  flex 1
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
 }
-/*盒子垂直自动高度*/
+// 盒子垂直自动高度撑满
 ._flexYauto {
-  max-height 100%
-  overflow-y auto
-  flex 1
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1;
 }
-/*平均分布*/
-._js {justify-content: space-around}
-/*内容垂直对齐*/
-._ac {align-items: center}
-/*内容水平对齐*/
-._jc {justify-content: center}
-/*子元素水平对齐*/
-._m0a {margin: 0 auto}
+// 内容-紧密-分布 - 不可用于居中
+._jcc {justify-content: center;}
+// 内容-贴边-平均-分布
+._jcsb {justify-content: space-between;}
+// 内容-平均-分布
+._jssa {justify-content: space-around;}
+// 轴线-居中
+._aic {align-items: center;}
+// 轴线-居底
+._aife {align-items: flex-end;}
+// 自动换行 多行+起始位置
+._fwwacf {flex-wrap: wrap; align-content: flex-start;}
+// 子元素-居中
+._asc {align-self: center;}
+// 子元素-居底
+._asfe {align-self: flex-end;}
+// 子元素-填充
+._ass {align-self: stretch;}
+// ========== 盒子常用 ========== end
 
-/*内容垂直分布居中*/
-._dfjcsb{
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
+// ========== 文本常用 ========== start
 
-/*内容垂直对齐*/
-._dfac{
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-}
+// -----------------------------------强制不换行
+// normal	默认。空白会被浏览器忽略。
+// pre	空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+// nowrap	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+// pre-wrap	保留空白符序列，但是正常地进行换行。
+// pre-line	合并空白符序列，但是保留换行符。
+// inherit	规定应该从父元素继承 white-space 属性的值。
+._wsn {white-space: nowrap;}
+// -----------------------------------文本换行(元素不换行)
+// normal 使用浏览器默认的换行规则。
+// break-all 允许在单词内换行。
+// keep-all 只能在半角空格或连字符处换行。
+._wbba {word-break: break-all;}
+// -----------------------------------文本换行(元素另起一行)
+// normal 只在允许的断字点换行（浏览器保持默认处理）。
+// break-word 在长单词或 URL 地址内部进行换行。
+._wwbw {word-wrap: break-word;}
+// 文本超出省略号(需配合overflow: hidden)
+._toe {text-overflow: ellipsis;}
 
-/*内容水平对齐*/
-._dfjc{
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-/*垂直水平居中*/
-._dfacjc{
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-/*垂直水平居中2*/
-._dfacjcb{
-  margin: auto
-}
-
-/*居底*/
-._dfai{
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
-}
-
-/*超出隐藏*/
-._oh{
-  overflow: hidden;
-}
-/*去掉文字省略号*/
+// 去掉文字省略号
 ._noRowHide{
   display: inline-block;
   overflow: visible;
   white-space: normal;
   text-overflow: clip;
 }
-/*文字一行省略号*/
+// 文字一行省略号
 ._ownRowHide{
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/*文字二行省略号*/
+// 文字二行省略号
 ._twoRowHide{
 	// line-height: 12px;
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
-	/* autoprefixer: off*/
+	//  autoprefixer: off
 	-webkit-box-orient: vertical;
-	/* autoprefixer: on*/
+	//  autoprefixer: on
 	word-break: break-all;
 }
+// ========== 文本常用 ========== end
+
+// 清除<input>标签属性
+._reInput {
+  outline: none;
+  background: transparent;
+  border: none;
+  outline: medium;
+}
+// 清除<a>标签属性
+._clear-a
+  text-decoration none
+  &:hover
+    color #000 //鼠标划过链接
+  &:active
+    color #000 //已选中的链接
+  &:visited
+    color #000 //已访问的链接
+  &:link
+    color #000 //未访问的链接
 
 // ------------------------- 公共组件 -------------------------
+
+// 清除浮动
+._clear{clear:both; height: 0; line-height: 0; font-size: 0}
 
 // 公共组件-容器
 ._content
@@ -279,9 +317,6 @@
 
 
 
-
-/*清除浮动*/
-._clear{clear:both; height: 0; line-height: 0; font-size: 0}
 
 // ------------------------- 公共方法 -------------------------
 

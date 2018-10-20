@@ -1,17 +1,22 @@
 {
-  "name": "vha-Website",
-  "version": "0.1.0",
+  "name": "vha-components",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "npm run docs:build && vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "docs:build": "node ./_data/_process_md.js"
   },
   "dependencies": {
-    "ant-design-vue": "^1.1.2",
-    "axios": "^0.18.0",
+    "highlight.js": "^9.13.0",
+    "marked": "^0.5.1",
+    "nprogress": "^0.2.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "register-service-worker": "^1.5.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.13.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

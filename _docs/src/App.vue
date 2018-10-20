@@ -1,8 +1,10 @@
 <style lang="stylus">
 @import "./assets/stylus/reset.styl"
+@import "./assets/stylus/ant-reset.styl"
 @import "./assets/stylus/font-awesome.styl"
 @import "./assets/stylus/global.styl"
-// #app
+#app
+  height 100%
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 <template>
@@ -10,7 +12,7 @@
     <router-view></router-view>
   </div>
 </template>
---------------------------------------------------------------------------------
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 <script type="text/ecmascript-6">
 export default {
   name: 'App',
