@@ -1,24 +1,43 @@
-# vha-components
+<h1 align="center">vha-components</h1>
+<p align="center">
+  <em>扫描二维码浏览体验</em>
+</p>
+<p align="center"><img align="center" width="200" src="https://raw.githubusercontent.com/neoStudioGroup/vha-components/master/README/qr.png"/></p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/vha-components"><img src="https://badgen.net/npm/v/vha-components" alt="Version"></a>
+  <a href="https://codeload.github.com/neoStudioGroup/vha-components/zip/master"><img src="https://badgen.net/npm/dt/vha-components" alt="downloads"></a>
+  <a href="https://github.com/neoStudioGroup/vha-components/blob/master/LICENSE"><img src="https://badgen.net/npm/license/vha-components" alt="License"></a>
+</p>
 
-Coming soon...
+<div align="center">
 
-可以和任何组件库搭配使用的基础hybrid app组件库
-它就像vue版的ionic，但更强调定制化和实用性
+[![NPM](https://nodei.co/npm/vha-components.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vha-components/)
 
-ps.在未来我们将加入微信小程序的同步开发，敬请期待!
+</div>
 
-不仅仅要有丰富好看的组件,还要有新奇实用的组件
+## 关于vha-components
+
+基于[Vue.js](https://vuejs.org/)的，强调定制化和实用性的，移动端UI组件库。[vha-components中文文档](https://neostudiogroup.github.io/vha-components)
+
+## 如何使用
+
+添加npm包到项目.
 
 ```shell
 npm install vha-components --save
 ```
 
-基础的components已经能够对应大多数开发情况,但仍然需要额外的组件支持请访问xxx
+在main.js内引入组件库
 
 ```javascript
-// 完善的列表筛选功能
 // import
 import Vue from 'vue'
-import VueComponents from 'vha-components'
-Vue.use(VueComponents)
+import vhacomponents from 'vha-components'
+Vue.use(vhacomponents)
 ```
+
+### Demo
+
+[完整的演示app](https://github.com/neoStudioGroup/vha-appDemo)
+
+[apk文件](https://github.com/neoStudioGroup/vha-appDemo/releases/download/0.0.2/vha-appDemo.apk)
