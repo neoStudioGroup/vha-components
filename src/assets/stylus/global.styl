@@ -1,0 +1,198 @@
+// 全局样式 - 只放通用class
+
+@import './iconfont'
+@import './method'
+@import './mixin'
+@import './reset'
+
+// ----- 公共属性
+
+._cl-000 {color: #000 !important;}
+._cl-fff {color: #fff !important;}
+._cl-444 {color: #444 !important;}
+._cl-success {color: Success_ !important;}
+._cl-info {color: Info_ !important;}
+._cl-warning {color: Warning_ !important;}
+._cl-error {color: Error_ !important;}
+._cl-dark {color: Dark_ !important;}
+._cl-calm {color: Calm_ !important;}
+._cl-stable {color: Stable_ !important;}
+// ------
+._bc-000 {background-color: #000 !important;}
+._bc-fff {background-color: #fff !important;}
+._bc-444 {background-color: #444 !important;}
+._bc-success {background-color: Success_ !important;}
+._bc-info {background-color: Info_ !important;}
+._bc-warning {background-color: Warning_ !important;}
+._bc-error {background-color: Error_ !important;}
+._bc-dark {background-color: Dark_ !important;}
+._bc-calm {background-color: Calm_ !important;}
+._bc-stable {background-color: Stable_ !important;}
+// ------
+._bdc-000 {border-color: #000 !important;}
+._bdc-fff {border-color: #fff !important;}
+._bdc-444 {border-color: #444 !important;}
+._bdc-success {border-color: Success_ !important;}
+._bdc-info {border-color: Info_ !important;}
+._bdc-warning {border-color: Warning_ !important;}
+._bdc-error {border-color: Error_ !important;}
+._bdc-dark {border-color: Dark_ !important;}
+._bdc-calm {border-color: Calm_ !important;}
+._bdc-stable {border-color: Stable_ !important;}
+
+._border-line
+  border-line(1px solid #aaa)
+._border-top-line
+  border-top-line(1px solid #aaa)
+._border-right-line
+  border-right-line(1px solid #aaa)
+._border-bottom-line
+  border-bottom-line(1px solid #aaa)
+._border-left-line
+  border-left-line(1px solid #aaa)
+
+._pa {position: absolute}
+._pr {position: relative}
+._nomg {margin: 0 !important}
+._nopd {padding: 0 !important}
+._nobd {border: 0 !important}
+
+// 最大化绝对置于最前
+._patlwh
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color rgba(0,0,0,0.5)
+  z-index 100000
+
+// 行高紧凑
+._lh1 {line-height: 1;}
+// 行高正常
+._lhn {line-height: normal;}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 盒子常用 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+/* 盒子 */
+._df {display:flex;}
+/* 内联盒子 */
+._dif {display:inline-flex;}
+/* 轴线 - 水平方向 (默认) */
+._fdr {flex-direction:row;}
+/* 轴线 - 垂直方向 */
+._fdc {flex-direction:column;}
+
+/* 轴线 - 对齐-顶部 (默认) */
+._aifs {align-items:flex-start;}
+/* 轴线 - 对齐-居中 */
+._aic {align-items:center;}
+/* 轴线 - 对齐-底部 */
+._aife {align-items:flex-end;}
+
+/* 内容 - 分布-顶部 (默认) */
+._jcfs {justify-content:flex-start;}
+/* 内容 - 分布-底部 */
+._jcfe {justify-content:flex-end;}
+/* 内容 - 分布-紧凑 #居中时需注意 */
+._jcc {justify-content:center;}
+/* 内容 - 分布-平均 */
+._jssa {justify-content:space-around;}
+/* 内容 - 分布-贴边-平均 */
+._jcsb {justify-content:space-between;}
+
+/* 多行 */
+._fww {flex-wrap:wrap;}
+/* 多行 + 分布-拉伸 */
+._acs {align-content:stretch;}
+/* 多行 + 分布-顶部 */
+._acfs {align-content:flex-start;}
+/* 多行 + 分布-底部 */
+._acfe {align-content:flex-end;}
+/* 多行 + 分布-紧凑 */
+._acc {align-content:center;}
+/* 多行 + 分布-平均 */
+._acsa {align-content:space-around;}
+/* 多行 + 分布-贴边-平均 */
+._acsb {align-content:space-between;}
+
+/* 子元素 - 水平居中 */
+._fm0a {margin:0 auto;}
+/* 子元素 - 居右 */
+._fmla {margin-left:auto;}
+/* 子元素 - 垂直居中 */
+._fma0 {margin:auto 0;}
+/* 子元素 - 居底 */
+._fmta {margin-top:auto;}
+/* 子元素 - 绝对居中 */
+._fma {margin:auto;}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 盒子常用 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+// ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 文本常用 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+._tl {text-align: left}
+._tc {text-align: center}
+._tr {text-align: right}
+// -----------------------------------强制不换行
+// normal	默认。空白会被浏览器忽略。
+// pre	空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+// nowrap	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+// pre-wrap	保留空白符序列，但是正常地进行换行。
+// pre-line	合并空白符序列，但是保留换行符。
+// inherit	规定应该从父元素继承 white-space 属性的值。
+._wsn {white-space: nowrap;}
+// -----------------------------------文本换行(元素不换行)
+// normal 使用浏览器默认的换行规则。
+// break-all 允许在单词内换行。
+// keep-all 只能在半角空格或连字符处换行。
+._wbba {word-break: break-all;}
+// -----------------------------------文本换行(元素另起一行)
+// normal 只在允许的断字点换行（浏览器保持默认处理）。
+// break-word 在长单词或 URL 地址内部进行换行。
+._wwbw {word-wrap: break-word;}
+// 文本超出省略号(需配合overflow: hidden)
+._toe {text-overflow: ellipsis;}
+
+// 去掉文字省略号
+._noEllipsis{
+  display: inline-block;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: clip;
+}
+// 文字一行省略号
+._oneEllipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+// 文字二行省略号
+._twoEllipsis{
+	// line-height: 12px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	//  autoprefixer: off
+	-webkit-box-orient: vertical;
+	//  autoprefixer: on
+	word-break: break-all;
+}
+// ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 文本常用 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+// 清除<input>标签属性
+._clearInput {
+  outline: none;
+  background: transparent;
+  border: none;
+  outline: medium;
+}
+
+// 清除<a>标签属性
+._clearA
+  text-decoration none
+  &:hover
+    color #000 //鼠标划过链接
+  &:active
+    color #000 //已选中的链接
+  &:visited
+    color #000 //已访问的链接
+  &:link
+    color #000 //未访问的链接

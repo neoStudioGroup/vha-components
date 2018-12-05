@@ -1,0 +1,136 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+// body {
+//   line-height: 1;
+// }
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+input,button,select,textarea{outline:none;}
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   height: 5px;
+// }
+
+// ::-webkit-scrollbar-track-piece {
+//   background-color: rgba(0, 0, 0, 0.04);
+//   -webkit-border-radius: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb:vertical {
+//   height: 5px;
+//   background-color: rgba(125, 125, 125, 0.2);
+//   -webkit-border-radius: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb:horizontal {
+//   width: 5px;
+//   background-color: rgba(125, 125, 125, 0.2);
+//   -webkit-border-radius: 6px;
+// }
+
+// ----- 自定义
+
+* {box-sizing: border-box;}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Helvetica;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+body, body a, body button, body media-switch, body:hover {
+  cursor: url(../images/finger.png) 8 8,auto;
+}
+
+// ----- 尺寸
+
+html
+  font-size (75 / (750 / 2)) * 100vw
+  @media screen and (max-width: 320px) 
+    font-size: 64px
+  @media screen and (min-width: 540px) 
+    font-size: 108px
+
+body
+  font-size rpx(24)
+  overscroll-behavior-y none
+
+h1
+  font-size rpx(54)
+h2
+  font-size rpx(48)
+h3
+  font-size rpx(42)
+h4
+  font-size rpx(36)
+h5
+  font-size rpx(30)
+h6
+  font-size rpx(24)
+  

@@ -32,8 +32,22 @@ npm install vha-components --save
 ```javascript
 // import
 import Vue from 'vue'
-import vhacomponents from 'vha-components'
-Vue.use(vhacomponents)
+import vhaComponents from 'vha-components'
+Vue.use(vhaComponents)
+```
+
+全局使用 rpx() （根目录建立vue.config.js文件内配置）
+
+```javascript
+module.exports = {
+  css: {
+    loaderOptions: {
+      stylus: {
+        import: ['~vha-components/src/assets/stylus/method.styl']
+      }
+    }
+  }
+}
 ```
 
 ### Demo

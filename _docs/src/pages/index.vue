@@ -187,6 +187,7 @@
       iframe
         width 375px
         height 667px
+        border-radius 6px
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－

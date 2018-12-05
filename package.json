@@ -1,6 +1,6 @@
 {
   "name": "vha-components",
-  "version": "0.0.11",
+  "version": "0.0.8",
   "description": "Vue hybrid app components",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/neoStudioGroup/vha-components/issues"
   },
-  "homepage": "https://github.com/neoStudioGroup/vha-components#readme"
+  "homepage": "https://github.com/neoStudioGroup/vha-components#readme",
+  "dependencies": {}
 }

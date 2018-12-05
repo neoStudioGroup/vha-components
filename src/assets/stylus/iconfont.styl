@@ -1,0 +1,39 @@
+
+@font-face {font-family: "iconfont";
+  src: 
+    url('../fonts/iconfont.woff?t=1541757016439') format('woff'),
+    url('../fonts/iconfont.ttf?t=1541757016439') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg?t=1541757016439#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+[class^="vha_icon-"], [class*=" vha_icon-"] {
+  font-family: "iconfont" !important;
+  font-size: rpx(38);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vha_icon-anim-spin {
+  animation: animate 2s infinite linear; 
+}
+
+.vha_icon-anim-pulse {
+  animation: animate 1s infinite steps(8);
+}
+
+@keyframes animate{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(359deg)}
+}
+
+// -------------------------
+  
+.vha_icon-loading:before { content: "\e614"; }
+.vha_icon-menu:before { content: "\e64b"; }
+.vha_icon-jiantou:before { content: "\e609"; }
+.vha_icon-setting:before { content: "\e608"; }
+.vha_icon-checkbox:before { content: "\e6c0"; }
+.vha_icon-left:before { content: "\e62c"; }
+.vha_icon-radio:before { content: "\e611"; }
+.vha_icon-checkboxB:before { content: "\e6cd"; }

@@ -1,0 +1,52 @@
+// ----- 公共方法
+
+rpx($px)
+  ($px / 2 / 75 ) * 1rem
+
+w-rpx($px)
+  "calc(100vw - %s)" % rpx($px)
+
+h-rpx($px)
+  "calc(100vh - %s)" % rpx($px)
+
+_border-line()
+  position relative
+  &::after
+    content ''
+    position absolute
+    pointer-events none
+    top 0
+    left 0
+    width 200%
+    height 200%
+    z-index 1
+    box-sizing border-box
+    transform scale(0.5)
+    transform-origin left top
+
+border-radius-line($radius)
+  border-radius $radius
+  &::before
+    border-radius ($radius * 2)
+  &::after
+    border-radius ($radius * 2)
+border-line($parm)
+  _border-line()
+  &::after
+    border $parm
+border-top-line($parm)
+  _border-line()
+  &::after
+    border-top $parm
+border-right-line($parm)
+  _border-line()
+  &::after
+    border-right $parm
+border-bottom-line($parm)
+  _border-line()
+  &::after
+    border-bottom $parm
+border-left-line($parm)
+  _border-line()
+  &::after
+    border-left $parm
