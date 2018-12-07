@@ -1,6 +1,6 @@
 {
   "name": "vha-components",
-  "version": "0.8.0",
+  "version": "0.8.01",
   "description": "Vue hybrid app components",
   "main": "index.js",
   "scripts": {

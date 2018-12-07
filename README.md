@@ -1,5 +1,7 @@
 <h1 align="center">vha-components</h1>
 
+<p align="center"><img align="center" width="200" src="https://raw.githubusercontent.com/neoStudioGroup/vha/master/README/components.png"/></p>
+
 <p align="center"><img src="https://raw.githubusercontent.com/neoStudioGroup/vha-appDemo/master/README/qr.png"/></p>
 
 <p align="center">
