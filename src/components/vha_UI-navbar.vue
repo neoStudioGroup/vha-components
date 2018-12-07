@@ -8,7 +8,7 @@
     .vha_UI-button
       // width rpx(90)
       font-size rpx(26)
-      color inherit  
+      color inherit
   
   .ui-n-middleBox
     position relative
