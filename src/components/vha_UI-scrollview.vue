@@ -133,7 +133,6 @@ export default {
     }
   },
   methods: {
-    //方法 - 每次进入页面创建
     touchStart (e) {
       this.startY = e.targetTouches[0].pageY
       this.touching = true

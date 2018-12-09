@@ -122,7 +122,6 @@ export default {
     }
   },
   methods: {
-    //方法 - 每次进入页面创建
     procColor: function () {
       if (this.$route.path === this.push) {
         this.temp_color = 'info'
@@ -132,7 +131,6 @@ export default {
     }
   },
   watch: {
-    //观察 - 数据或方法
     '$route': function (to, from) {
       this.procColor()
     }

@@ -105,7 +105,6 @@ export default {
     }
   },
   methods: {
-    //方法 - 每次进入页面创建
     getRouteProps: function (source) {
       if (!this.followMeta) {
         return
@@ -130,7 +129,6 @@ export default {
     }
   },
   watch: {
-    //观察 - 数据或方法
     '$route': function (to, from) {
       this.getRouteProps(to)
     }

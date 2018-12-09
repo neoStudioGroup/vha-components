@@ -130,7 +130,6 @@ export default {
     }
   },
   methods: {
-    //方法 - 每次进入页面创建
     savePosition: function (fromRoute) {
       // 如果离开的路由页面设置了缓存, 就将下面每个vha_UI-scrollview的position记录到路由内
       let temp_meta = fromRoute.meta
@@ -191,7 +190,7 @@ export default {
         this.animateEnd()
       })
     },
-    // 没耐心了addEventListener transitionend 怎么都有偶尔不触发的bug, 改为timeout检测
+    // addEventListener transitionend 怎么都有偶尔不触发的bug, 改为timeout检测
     animateEnd: function () {
       if (this.enterEnd && this.leaveEnd) {
         this.maskShow = false
@@ -213,7 +212,6 @@ export default {
     }
   },
   watch: {
-    //观察 - 数据或方法
     '$route': function (to, from) {
       // 页面转跳前保存滚动条位置
       this.savePosition(from)

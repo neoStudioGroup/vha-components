@@ -137,7 +137,7 @@ vhaNavbar_color($color, $backgroundColor, $backgroundActiveColor)
               size="full" 
               icon="vha_icon-left" 
               v-if="this.temp_sideButton === 'left' || this.temp_sideButton === 'both'"
-              @click="$router.go(-1)"
+              @click="onLeftButton"
             >
             </vha-button>
           </slot>
@@ -241,7 +241,20 @@ export default {
     vhaButton
   },
   methods: {
-    //方法 - 每次进入页面创建
+    onLeftButton: function () {
+      if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
+        this.$route.meta.vhaNavbar.leftButtonEvent()
+      } else {
+        this.$router.go(-1)
+      }
+    },
+    onRightButton: function () {
+      if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
+        this.$route.meta.vhaNavbar.leftButtonEvent()
+      } else {
+        this.$router.go(-1)
+      }
+    },
     getRouteProps: function (source) {
       // 获取路由navbar的标题和信息
       try {
@@ -275,7 +288,6 @@ export default {
     }
   },
   watch: {
-    //观察 - 数据或方法
     'color': function () {
       this.temp_color = this.color
     },
