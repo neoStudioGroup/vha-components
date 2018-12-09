@@ -242,17 +242,21 @@ export default {
   },
   methods: {
     onLeftButton: function () {
-      if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
-        this.$route.meta.vhaNavbar.leftButtonEvent()
-      } else {
-        this.$router.go(-1)
+      if (typeof this.$route.meta.vhaNavbar != 'undefined') {
+        if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
+          this.$route.meta.vhaNavbar.leftButtonEvent()
+        } else {
+          this.$router.go(-1)
+        }
       }
     },
     onRightButton: function () {
-      if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
-        this.$route.meta.vhaNavbar.leftButtonEvent()
-      } else {
-        this.$router.go(-1)
+      if (typeof this.$route.meta.vhaNavbar != 'undefined') {
+        if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
+          this.$route.meta.vhaNavbar.leftButtonEvent()
+        } else {
+          this.$router.go(-1)
+        }
       }
     },
     getRouteProps: function (source) {
@@ -298,12 +302,37 @@ export default {
       let toDepth = to.path.split('/').length
       let fromDepth = from.path.split('/').length
       
-      // 如果转跳有设置路由动画方式就选择, 否则自行判断
+      
+      // 默认根据路径自动判断
+      let temp_nextAnimate = ''
+      
+      // 如果vhaRouter转跳有设置路由动画方式就选择
       if (this.nextAnimate) {
-        this.transitionName = this.nextAnimate
+        temp_nextAnimate = this.nextAnimate
       } else {
-        this.transitionName = toDepth === fromDepth ? '' : toDepth < fromDepth ? 'out' : 'in'
+        // 如果本页路由有设置"退出动画"就优先应用
+        if (typeof from.meta.vhaAnime != 'undefined') {
+          if (typeof from.meta.vhaAnime.out != 'undefined') {
+            temp_nextAnimate = from.meta.vhaAnime.out
+          }
+        }
+        // 否则如果新页路由有设置"进入动画"就应用
+        if (temp_nextAnimate === '') {
+          if (typeof to.meta.vhaAnime != 'undefined') {
+            if (typeof to.meta.vhaAnime.in != 'undefined') {
+              temp_nextAnimate = to.meta.vhaAnime.in
+            }
+          }
+        }
       }
+      
+      // 如果都没有就自行判断
+      this.transitionName = temp_nextAnimate || (toDepth === fromDepth ? '' : toDepth < fromDepth ? 'out' : 'in')
+      
+      // 嵌套的路由顶层不会触发动画&结束事件, 所以强制动画开启10毫秒后设置下次动画为空
+      setTimeout(() => {
+        this.nextAnimate = ''
+      }, 10)
     }
   },
   created() {
