@@ -6,23 +6,23 @@ const vhaRouter = {
     // js控制路由动画
     Vue.prototype.$vhaRouter = {
       push: (ob) => {
-        vhaEvent.App('push', ob.value, ob.keepAlive)
         vhaEvent.Routerview(ob.animate)
+        vhaEvent.App('push', ob.value, ob.keepAlive)
       },
       go: (ob) => {
-        vhaEvent.App('go', ob.value, ob.keepAlive)
         vhaEvent.Routerview(ob.animate)
+        vhaEvent.App('go', ob.value, ob.keepAlive)
       }
     }
     // js控制路由动画
     Vue.prototype.$vhaRt = {
       push: (ob) => {
-        vhaEvent.App('push', ob.value, ob.keepAlive)
         vhaEvent.Routerview(ob.animate)
+        vhaEvent.App('push', ob.value, ob.keepAlive)
       },
       go: (ob) => {
-        vhaEvent.App('go', ob.value, ob.keepAlive)
         vhaEvent.Routerview(ob.animate)
+        vhaEvent.App('go', ob.value, ob.keepAlive)
       }
     }
     
@@ -39,10 +39,10 @@ const vhaRouter = {
       }
       
       element.addEventListener('click', () => {
-        // 通知vhaApp转跳路由
-        vhaEvent.App(temp_routerFunc, temp_routerValue, binding.value.keepAlive)
         // 通知vhaRouterview转跳路由动画
         vhaEvent.Routerview(binding.value.animate)
+        // 通知vhaApp转跳路由
+        vhaEvent.App(temp_routerFunc, temp_routerValue, binding.value.keepAlive)
       })
     }
     
