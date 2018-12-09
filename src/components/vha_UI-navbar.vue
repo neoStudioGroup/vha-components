@@ -165,6 +165,7 @@ vhaNavbar_color($color, $backgroundColor, $backgroundActiveColor)
               size="full" 
               icon="vha_icon-menu" 
               v-if="this.temp_sideButton === 'right' || this.temp_sideButton === 'both'"
+              @click="onRightButton"
             >
             </vha-button>
           </slot>
@@ -242,21 +243,32 @@ export default {
   },
   methods: {
     onLeftButton: function () {
-      if (typeof this.$route.meta.vhaNavbar != 'undefined') {
-        if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
-          this.$route.meta.vhaNavbar.leftButtonEvent()
+      try {
+        if (typeof this.$route.meta.vhaNavbar != 'undefined') {
+          if (typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
+            this.$route.meta.vhaNavbar.leftButtonEvent()
+          } else {
+            throw 0
+          }
         } else {
-          this.$router.go(-1)
+          throw 0
         }
+      } catch (e) {
+        this.$router.go(-1)
       }
     },
     onRightButton: function () {
-      if (typeof this.$route.meta.vhaNavbar != 'undefined') {
-        if(typeof this.$route.meta.vhaNavbar.leftButtonEvent === 'function') {
-          this.$route.meta.vhaNavbar.leftButtonEvent()
+      try {
+        if (typeof this.$route.meta.vhaNavbar != 'undefined') {
+          if (typeof this.$route.meta.vhaNavbar.rightButtonEvent === 'function') {
+            this.$route.meta.vhaNavbar.rightButtonEvent()
+          } else {
+            throw 0
+          }
         } else {
-          this.$router.go(-1)
+          throw 0
         }
+      } catch (e) {
       }
     },
     getRouteProps: function (source) {
