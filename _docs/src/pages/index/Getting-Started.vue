@@ -9,7 +9,6 @@
 
 <br />
 <br />
-<br />
 
 <p>1.添加npm包到项目。</p>
 <blockquote>
@@ -35,7 +34,7 @@ Vue.use(vhaComponents)</code></pre>
 </section>
     <section id="lastSection" class="_df _jcsb">
       <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
-      <span>上次更新：2018-10-17 16:33:09</span>
+      <span>上次更新：2018-12-14 15:55:47</span>
     </section>
   </div>
 </template>

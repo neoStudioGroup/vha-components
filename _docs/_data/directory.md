@@ -6,199 +6,59 @@
 }
 ---
 
-<section id="Getting-Started">
+<section id="vha-directory">
 
-# [Getting Started](#Getting-Started)
+# [vha](#vha)
 
 <br />
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
-
-> cordova plugin add cordova-plugin-chrome
-
-<router-link to="/aaa">router-link-aaa</router-link>
-
-Welcome to our API.
-
-This API document is designed for those interested in developing for our platform.
-
-This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.
-
-This API is still under development and will evolve.
-
-<p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
-
-<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-info">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
-
-### **事件 (Event)**
-
-<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
-
-<dl>
-  <dt>title</dt>
-  <dd>The title for the book</dd>
-  <dt>score</dt>
-  <dd>The book's score between 0 and 5</dd>
-</dl>
-
-参数|类型|说明
--|-|-
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-
-Code|Name|Description
--|-|-
-200|OK|Success
-201|Created|Creation Successful
-400|Bad Request|We could not process that action
-403|Forbidden|We couldn’t authenticate you
-
-```javascript
-StatusBaroverlaysWebView: function () {
-  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  if(this.overlaysWebViewtruefalse){
-    this.logText += "设置 overlaysWebView = false" + "\n"
-    this.overlaysWebViewtruefalse = false
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }else{
-    this.logText += "设置 overlaysWebView = true" + "\n"
-    this.overlaysWebViewtruefalse = true
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }
-}
+```
+vha
+├_docs //官网源文件夹
+├docs //文档网站
+├_ui //ui工具界面源文件
+├ui //ui工具界面
+└bin //
+ ├apis.js //全局方法
+ ├config.js //配置文件方法
+ ├config.json //配置文件
+ ├config_debug.json //debug配置文件
+ ├global.js //全局挂载
+ ├index.js //入口文件
+ └index_ui.js //ui命令
+├README //README相关文件
+├.gitignore //git忽略文件
+├.npmignore //npm忽略文件
+├LICENSE //开源协议
+├package.json //包信息
+└README.md //说明文档
 ```
 
 </section>
-<!-- ------------------------------------------- -->
-<section id="Authentication">
 
-# [Authentication](#Authentication)
+<section id="vha-components-directory">
 
-222222222
+# [vha-components](#vha-components)
 
-222222222
+<br />
 
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
+```
+src
+├assets
+├─fonts //图标文件夹
+├─images //图片文件夹
+└─stylus //css文件夹
+  ├global.styl //全局样式
+  ├iconfont.styl //图标样式
+  ├method.styl //公共方法
+  ├mixin.styl //变量/方法
+  └reset.styl //重置默认css
+├components //组件文件夹
+ └utils.js //公共工具类方法
+├vhaEvent.js //vha事件
+├vhaInstall.js //vha组件挂载安装
+├vhaMixin.js //vha_rpx 等方法
+└vhaRouter.js //vhaRt等指令
+```
 
 </section>
-<!-- ------------------------------------------- -->
-<section id="Errors">
-
-# [Errors](#Errors)
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-</section>
-<!-- ------------------------------------------- -->

@@ -4,6 +4,9 @@ import Router from 'vue-router'
 import index from '@/pages/index.vue'
 import intro from '@/pages/index/intro.vue'
 import GettingStarted from '@/pages/index/Getting-Started.vue'
+import directory from '@/pages/index/directory.vue'
+
+
 import Authentication from '@/pages/index/Authentication.vue'
 import Errors from '@/pages/index/Errors.vue'
 
@@ -26,6 +29,14 @@ export default new Router({
           path: '/GettingStarted',
           component: GettingStarted
         },
+        {
+          path: '/directory',
+          component: directory
+        },
+        
+        
+        
+        
         {
           path: '/Authentication',
           component: Authentication
