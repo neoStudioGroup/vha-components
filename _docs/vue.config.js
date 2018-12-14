@@ -17,24 +17,19 @@ module.exports = {
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, '..') + '\\docs',
         routes: [
-          '/', 
-          '/GettingStarted', 
-          '/Authentication', 
-          '/Errors'
+          '/',
+          '/guide'
         ],
         postProcess(context) {
           // 在这里配置每个页面的标题
+          let tail = 'vha-components 文档'
           let titles = {
-            '/': 'vha-docs',
-            '/GettingStarted': '快速开始'
-          };
-          let temp_title = titles[context.route]
-          if (!temp_title) {
-            temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' vha-components 文档'
+            '/': 'vha-components 组件文档',
+            '/guide': '开发指南 - ' + tail
           }
           context.html = context.html.replace(
             /<title>[^<]*<\/title>/i,
-            `<title>${temp_title}</title>`
+            `<title>${titles[context.route]}</title>`
           )
           return context
         }
