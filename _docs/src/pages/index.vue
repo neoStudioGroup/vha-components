@@ -113,6 +113,7 @@
               color #1890ff
       h1
         a
+          font-weight bold
           @extend ._clear-a
           color #474a54 !important
       table
@@ -129,7 +130,6 @@
 
       pre
         padding 0
-        margin 0
         border 1px solid #eee
         border-radius 8px
         // box-shadow 0 1px 6px rgba(0,0,0,0.15)

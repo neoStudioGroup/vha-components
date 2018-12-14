@@ -23,70 +23,69 @@ Vue.mixin({
 export default new Vuex.Store({
   state: {
     showSidebar: true, 
-    showSideOutrouter: 'intro,GettingStarted,Authentication', 
+    showSideOutrouter: 'guide', 
     showSidebarSrc: 'https://neostudiogroup.com/vha-appDemo/#/components/', 
     menus: [
       {
         title: '开发指南',
         list: [
           {
-            text: '介绍',
+            text: '开发指南',
             note: '',
             noteClass: '',
-            href: '/intro',
+            href: '/guide',
             select: false,
             showItem: false,
             item: [
-            ]
-          },
-          {
-            text: '快速开始',
-            note: '',
-            noteClass: '',
-            href: '/GettingStarted',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '目录结构',
-            note: '',
-            noteClass: '',
-            href: '/directory',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '设计指南',
-            note: '',
-            noteClass: '',
-            href: '/design',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: '1px线',
-            note: '',
-            noteClass: '',
-            href: '/1px',
-            select: false,
-            showItem: false,
-            item: [
-            ]
-          },
-          {
-            text: 'neo组件化命名规范',
-            note: '',
-            noteClass: '',
-            href: '/componentized',
-            select: false,
-            showItem: false,
-            item: [
+              {
+                subText: '介绍',
+                subNote: '',
+                noteClass: '',
+                href: '#intro',
+                select: false
+              },
+              {
+                subText: '快速开始',
+                subNote: '',
+                noteClass: '',
+                href: '#GettingStarted',
+                select: false
+              },
+              {
+                subText: '目录结构',
+                subNote: '',
+                noteClass: '',
+                href: '#directory',
+                select: false
+              },
+              {
+                subText: '设计指南',
+                subNote: '',
+                noteClass: '',
+                href: '#design',
+                select: false
+              },
+              {
+                subText: '1px线',
+                subNote: '',
+                noteClass: '',
+                href: '#onepx',
+                select: false
+              },
+              {
+                subText: '指令',
+                subNote: '',
+                noteClass: '',
+                href: '#directive',
+                select: false
+              },
+              {
+                subText: 'neo组件化命名规范',
+                subNote: '',
+                noteClass: '',
+                href: '#componentized',
+                select: false
+              }
             ]
           }
         ]
