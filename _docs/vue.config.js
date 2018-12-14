@@ -22,19 +22,21 @@ module.exports = {
           '/Authentication', 
           '/Errors'
         ],
-        postProcessHtml: function (context) {
+        postProcess(context) {
           // 在这里配置每个页面的标题
-          var titles = {
-            '/': 'vha-docs'
-          }
+          let titles = {
+            '/': 'vha-docs',
+            '/GettingStarted': '快速开始'
+          };
           let temp_title = titles[context.route]
           if (!temp_title) {
             temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' vha-components 文档'
           }
-          return context.html.replace(
+          context.html = context.html.replace(
             /<title>[^<]*<\/title>/i,
-            '<title>' + temp_title + '</title>'
+            `<title>${temp_title}</title>`
           )
+          return context
         }
       })
     ]

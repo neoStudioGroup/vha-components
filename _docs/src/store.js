@@ -23,58 +23,67 @@ Vue.mixin({
 export default new Vuex.Store({
   state: {
     showSidebar: true, 
-    showSideOutrouter: 'GettingStarted,Authentication', 
-    showSidebarSrc: 'https://neostudiogroup.github.io/vha-appDemo/', 
+    showSideOutrouter: 'intro,GettingStarted,Authentication', 
+    showSidebarSrc: 'https://neostudiogroup.com/vha-appDemo/#/components/', 
     menus: [
       {
-        title: 'Documentation',
+        title: '开发指南',
         list: [
           {
-            text: 'Getting Started',
+            text: '介绍',
+            note: '',
+            noteClass: '',
+            href: '/intro',
+            select: false,
+            showItem: false,
+            item: [
+            ]
+          },
+          {
+            text: '快速开始',
             note: '',
             noteClass: '',
             href: '/GettingStarted',
             select: false,
             showItem: false,
             item: [
-              {
-                subText: 'Getting Started',
-                subNote: 'Splashscreen',
-                noteClass: '',
-                href: '#Getting-Started',
-                select: false
-              },
-              {
-                subText: 'Authentication',
-                subNote: 'StatusBar',
-                noteClass: '',
-                href: '#Authentication',
-                select: false
-              },
-              {
-                subText: 'Errors',
-                subNote: 'Network',
-                noteClass: '',
-                href: '#Errors',
-                select: false
-              }
             ]
           },
           {
-            text: 'Authentication',
+            text: '目录结构',
             note: '',
             noteClass: '',
-            href: '/Authentication',
+            href: '/directory',
             select: false,
             showItem: false,
             item: [
             ]
           },
           {
-            text: 'Errors',
+            text: '设计指南',
             note: '',
             noteClass: '',
-            href: '/Errors',
+            href: '/design',
+            select: false,
+            showItem: false,
+            item: [
+            ]
+          },
+          {
+            text: '1px线',
+            note: '',
+            noteClass: '',
+            href: '/1px',
+            select: false,
+            showItem: false,
+            item: [
+            ]
+          },
+          {
+            text: 'neo组件化命名规范',
+            note: '',
+            noteClass: '',
+            href: '/componentized',
             select: false,
             showItem: false,
             item: [
@@ -85,33 +94,36 @@ export default new Vuex.Store({
       {
         title: '基础 Base',
         list: [
-{text: '导航栏', note: 'NavBar', noteClass: '', href: '/NavBar', select: false, showItem: false, item: []},
-{text: '分段器', note: 'Segment', noteClass: '', href: '/Segment', select: false, showItem: false, item: []},
-{text: '导航栏', note: 'NavBar', noteClass: '', href: '/NavBar', select: false, showItem: false, item: []},
-{text: '滚动区域', note: 'ScrollView', noteClass: '', href: '/ScrollView', select: false, showItem: false, item: []}
+{text: '路由视图', note: 'Router View', noteClass: '', href: '/routerView', select: false, showItem: false, item: []},
+{text: '滚动视图', note: 'Scroll View', noteClass: '', href: '/scrollView', select: false, showItem: false, item: []},
+{text: '风格', note: 'style', noteClass: '', href: '/style', select: false, showItem: false, item: []},
+{text: '视图区域', note: 'view', noteClass: '', href: '/view', select: false, showItem: false, item: []},
+{text: '导航栏', note: 'NavBar', noteClass: '', href: '/navBar', select: false, showItem: false, item: []},
+{text: '标签栏', note: 'TabBar', noteClass: '', href: '/tabBar', select: false, showItem: false, item: []},
+{text: '弹出层', note: 'Popup', noteClass: '', href: '/popup', select: false, showItem: false, item: []}
         ]
       },
       {
-        title: '数据输入 Data Entry',
+        title: '表单 Forms',
         list: [
-{text: '按钮', note: 'Button', noteClass: '', href: '/Button', select: false, showItem: false, item: []},
-{text: '滑动开关', note: 'Switch', noteClass: '', href: '/Switch', select: false, showItem: false, item: []},
-{text: '滑块条', note: 'Slider', noteClass: '', href: '/Slider', select: false, showItem: false, item: []},
-{text: '步进器', note: 'Stepper', noteClass: '', href: '/Stepper', select: false, showItem: false, item: []}
+{text: '按钮', note: 'Button', noteClass: '', href: '/button', select: false, showItem: false, item: []},
+{text: '按钮组', note: 'Button Group', noteClass: '', href: '/buttonGroup', select: false, showItem: false, item: []},
+{text: '输入框', note: 'Input', noteClass: '', href: '/input', select: false, showItem: false, item: []},
+{text: '开关', note: 'Switch', noteClass: '', href: '/switch', select: false, showItem: false, item: []},
+{text: '单选框', note: 'Radio', noteClass: '', href: '/radio', select: false, showItem: false, item: []},
+{text: '多选框', note: 'Checkbox', noteClass: '', href: '/checkbox', select: false, showItem: false, item: []},
+{text: '滑块', note: 'Slider', noteClass: '', href: '/slider', select: false, showItem: false, item: []}
         ]
       },
       {
-        title: '数据显示 Data Display',
+        title: '扩展 Expansion',
         list: [
-{text: '轮播图', note: 'Swipe', noteClass: '', href: '/Swipe', select: false, showItem: false, item: []},
-{text: '卡片', note: 'Card', noteClass: '', href: '/Card', select: false, showItem: false, item: []}
-        ]
-      },
-      {
-        title: '反馈操作 Feedback',
-        list: [
-{text: '上拉菜单', note: 'ActionSheet', noteClass: '', href: '/ActionSheet', select: false, showItem: false, item: []},
-{text: '加载对话框', note: 'Loading', noteClass: '', href: '/Loading', select: false, showItem: false, item: []}
+{text: '轮播', note: 'Swipe', noteClass: '', href: '/swipe', select: false, showItem: false, item: []},
+{text: '角标', note: 'Badge', noteClass: '', href: '/badge', select: false, showItem: false, item: []},
+{text: '对话框', note: 'Dialog', noteClass: '', href: '/dialog', select: false, showItem: false, item: []},
+{text: '上拉菜单', note: 'Action Sheet', noteClass: '', href: '/actionSheet', select: false, showItem: false, item: []},
+{text: '信息提示', note: 'Toast', noteClass: '', href: '/toast', select: false, showItem: false, item: []},
+{text: '弹出气泡', note: 'Popover', noteClass: '', href: '/popover', select: false, showItem: false, item: []}
         ]
       }
     ]

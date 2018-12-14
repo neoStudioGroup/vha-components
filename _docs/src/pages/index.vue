@@ -111,9 +111,10 @@
               content '#'
               margin-left 6px
               color #1890ff
-      a
-        @extend ._clear-a
-        color #474a54 !important
+      h1
+        a
+          @extend ._clear-a
+          color #474a54 !important
       table
         border 1px solid #E1E1E1
         margin 0 0 20px 0
@@ -184,10 +185,13 @@
       background-image url('../assets/images/phone-case.png')
       background-repeat no-repeat
       background-size 100%
+      .ui-s-p-if
+        border-radius 6px
+        overflow hidden
+        transform translateY(0px) 
       iframe
         width 375px
         height 667px
-        border-radius 6px
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
@@ -247,12 +251,12 @@
         </section>
          -->
       </div>
-      <div class="ui-l-color _df _jssa">
+      <!-- <div class="ui-l-color _df _jssa">
         <div style="background-color:#03a6ff" @click="onColor('mainCl', '#03a6ff')"></div>
         <div style="background-color:#f1404b" @click="onColor('mainCl', '#f1404b')"></div>
         <div style="background-color:#3ac569" @click="onColor('mainCl', '#3ac569')"></div>
         <div style="background-color:#35d69b" @click="onColor('mainCl', '#35d69b')"></div>
-      </div>
+      </div> -->
     </div>
     <!-- UI组件-右侧内容 -->
     <div class="_UI-content _flexYauto">
@@ -261,7 +265,9 @@
     <!-- UI组件-侧边栏 -->
     <div class="_UI-sidebar" v-if="$store.state.showSidebar">
       <div class="ui-s-phone">
-        <iframe :src="iframeSrc" frameborder="0"></iframe>
+        <div class="ui-s-p-if">
+          <iframe :src="iframeSrc" frameborder="0"></iframe>
+        </div>
       </div>
     </div>
   </div>
