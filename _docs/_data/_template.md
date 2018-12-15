@@ -1,18 +1,14 @@
 ---
 {
   "title": "快速开始",
-  "name": "Getting-Started",
+  "name": "Getting",
   "time": "2018-12-15 15:10:25"
 }
 ---
 
-<section id="Getting-Started">
+<section id="Getting">
 
-# **[Getting Started](#Getting-Started)**
-
-<br />
-
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+# **[vha-](#Getting)**
 
 > cordova plugin add cordova-plugin-chrome
 
@@ -78,127 +74,27 @@ StatusBaroverlaysWebView: function () {
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Authentication">
+<section id="API">
 
-# **[Authentication](#Authentication)**
+# **[API](#API)**
 
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
+参数|类型|默认值|说明
+-|-|-|-
+size|String|auto|类型，可选值"auto","full"。(默认根据网页宽度自动适配)
+include|String|-|包含的缓存路由name，与router-view一致。
+exclude|String|-|排除的缓存路由name，与router-view一致。
+max|Number|0|最大缓存数
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Errors">
+<section id="Event">
 
-# **[Errors](#Errors)**
+# **[Event](#Event)**
 
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
-
-333333333
+事件|参数|说明
+-|-|-
+networkState|String|网络连接类型
+networkState|String|网络连接类型
+networkState|String|网络连接类型
 
 </section>
-<!-- ------------------------------------------- -->
