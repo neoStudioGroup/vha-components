@@ -2,7 +2,7 @@
   <div class="index_PG-Getting-Started">
 <section id="Getting-Started">
 
-<h1><strong><a href="#Getting-Started">Getting Started</a></strong></h1>
+<h1><a href="#Getting-Started">Getting Started</a></h1>
 <br />
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
@@ -105,7 +105,7 @@
 <!-- ------------------------------------------- -->
 <section id="Authentication">
 
-<h1><strong><a href="#Authentication">Authentication</a></strong></h1>
+<h1><a href="#Authentication">Authentication</a></h1>
 <p>222222222</p>
 <p>222222222</p>
 <p>222222222</p>
@@ -139,7 +139,7 @@
 <!-- ------------------------------------------- -->
 <section id="Errors">
 
-<h1><strong><a href="#Errors">Errors</a></strong></h1>
+<h1><a href="#Errors">Errors</a></h1>
 <p>333333333</p>
 <p>333333333</p>
 <p>333333333</p>

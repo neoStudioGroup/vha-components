@@ -113,7 +113,6 @@
               color #1890ff
       h1
         a
-          font-weight bold
           @extend ._clear-a
           color #474a54 !important
       table
@@ -172,9 +171,8 @@
         margin-right -15px
         background-color #FAFAFA
         border-radius 2px
-      ._bdc-info
         font-weight bold
-  
+
   //UI组件-侧边栏
   ._UI-sidebar
     padding 20px

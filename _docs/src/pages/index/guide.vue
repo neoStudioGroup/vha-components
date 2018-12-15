@@ -2,7 +2,7 @@
   <div class="index_PG-guide">
 <section id="intro">
 
-<h1><a href="#intro">介绍</a></h1>
+<h1><strong><a href="#intro">介绍</a></strong></h1>
 <p>##vha-components</p>
 <p>基于vue开发的移动端组件库，为快速构建移动端“定制化”ui界面而生。</p>
 <p>特点是即可快速构建也可自由修改。</p>
@@ -13,7 +13,7 @@
 <!-- ------------------------------------------- -->
 <section id="GettingStarted">
 
-<h1><a href="#GettingStarted">快速开始</a></h1>
+<h1><strong><a href="#GettingStarted">快速开始</a></strong></h1>
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/vha-components" target="_blank">vha-components</a></p>
 
 <br />
@@ -41,7 +41,7 @@ Vue.use(vhaComponents)</code></pre>
 <!-- ------------------------------------------- -->
 <section id="directory">
 
-<h1><a href="#directory">目录结构</a></h1>
+<h1><strong><a href="#directory">目录结构</a></strong></h1>
 <h3>vha</h3>
 <pre><code>vha
 ├ _docs //官网源文件夹
@@ -81,7 +81,7 @@ Vue.use(vhaComponents)</code></pre>
 <!-- ------------------------------------------- -->
 <section id="design">
 
-<h1><a href="#design">设计指南</a></h1>
+<h1><strong><a href="#design">设计指南</a></strong></h1>
 <p>vha全部采用了以750px为基准的rpx单位</p>
 <p>设计图应采用iphone6尺寸（1334 x 750）。</p>
 <p>应用rpx()按照设计图尺寸填写即可。</p>
@@ -89,7 +89,7 @@ Vue.use(vhaComponents)</code></pre>
 <!-- ------------------------------------------- -->
 <section id="onepx">
 
-<h1><a href="#onepx">1px线</a></h1>
+<h1><strong><a href="#onepx">1px线</a></strong></h1>
 <p>vha的1px实现与其它库略有不同，因此支持圆角边框。</p>
 <p>支持的css方法有：</p>
 <pre><code>border-radius-line($radius)
@@ -97,13 +97,13 @@ border-line($parm)
 border-top-line($parm)
 border-right-line($parm)
 border-bottom-line($parm)
-border-left-line($parm)</code></pre><p>例：</p>
+border-left-line($parm)</code></pre><p><strong>例：</strong></p>
 <pre><code>border-line(1px solid red)
 border-radius-line(rpx(10))</code></pre></section>
 <!-- ------------------------------------------- -->
 <section id="directive">
 
-<h1><a href="#directive">指令&amp;方法</a></h1>
+<h1><strong><a href="#directive">指令&amp;方法</a></strong></h1>
 <p>vha指令支持将v-vhaRt绑定在任意元素上进行路由转跳用法与$Router相同只不过多了路由动画和动态缓存控制。</p>
 <p class="ui-r-note _bdc-info">v-vhaRt</p>
 
@@ -179,13 +179,13 @@ border-radius-line(rpx(10))</code></pre></section>
 <td>设置即将转跳的页面是否开启缓存(路由内也可完成相同设置)</td>
 </tr>
 </tbody></table>
-<p>例：</p>
+<p><strong>例：</strong></p>
 <pre><code>&lt;div v-vhaRt=&quot;{push:&#39;/xxx&#39;, animate:&#39;in&#39;, keepAlive:true}&quot;&gt;&lt;/div&gt;
 &lt;div @click=&quot;$vhaRt.push({value:&#39;/xxx&#39;, animate: &#39;in&#39;, keepAlive:true})&quot;&gt;&lt;/div&gt;</code></pre></section>
 <!-- ------------------------------------------- -->
 <section id="componentized">
 
-<h1><a href="#componentized">neo组件化命名规范</a></h1>
+<h1><strong><a href="#componentized">neo组件化命名规范</a></strong></h1>
 <p>强烈推荐组合<a href="https://github.com/mixingyu/Componentized-name-rules">neo组件化命名规范</a>开发</p>
 <p>可以让开发过程非常简单清晰。</p>
 </section>

@@ -5,6 +5,8 @@ import index from '@/pages/index.vue'
 import guide from '@/pages/index/guide.vue'
 import routerView from '@/pages/index/routerView.vue'
 import scrollView from '@/pages/index/scrollView.vue'
+import style from '@/pages/index/style.vue'
+import view from '@/pages/index/view.vue'
 
 
 Vue.use(Router)
@@ -29,6 +31,14 @@ export default new Router({
         {
           path: '/scrollView',
           component: scrollView
+        },
+        {
+          path: '/style',
+          component: style
+        },
+        {
+          path: '/view',
+          component: view
         }
         
         

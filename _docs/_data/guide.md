@@ -8,7 +8,7 @@
 
 <section id="intro">
 
-# [介绍](#intro)
+# **[介绍](#intro)**
 
 ##vha-components
 
@@ -26,7 +26,7 @@ vha提供了cordova插件的封装[vha-native](https://github.com/neoStudioGroup
 <!-- ------------------------------------------- -->
 <section id="GettingStarted">
 
-# [快速开始](#GettingStarted)
+# **[快速开始](#GettingStarted)**
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/vha-components" target="_blank">vha-components</a></p>
 
@@ -63,7 +63,7 @@ module.exports = {
 <!-- ------------------------------------------- -->
 <section id="directory">
 
-# [目录结构](#directory)
+# **[目录结构](#directory)**
 
 ### vha
 
@@ -114,7 +114,7 @@ src
 <!-- ------------------------------------------- -->
 <section id="design">
 
-# [设计指南](#design)
+# **[设计指南](#design)**
 
 vha全部采用了以750px为基准的rpx单位
 
@@ -126,7 +126,7 @@ vha全部采用了以750px为基准的rpx单位
 <!-- ------------------------------------------- -->
 <section id="onepx">
 
-# [1px线](#onepx)
+# **[1px线](#onepx)**
 
 vha的1px实现与其它库略有不同，因此支持圆角边框。
 
@@ -141,7 +141,7 @@ border-bottom-line($parm)
 border-left-line($parm)
 ```
 
-例：
+**例：**
 
 ```
 border-line(1px solid red)
@@ -152,7 +152,7 @@ border-radius-line(rpx(10))
 <!-- ------------------------------------------- -->
 <section id="directive">
 
-# [指令&方法](#directive)
+# **[指令&方法](#directive)**
 
 vha指令支持将v-vhaRt绑定在任意元素上进行路由转跳用法与$Router相同只不过多了路由动画和动态缓存控制。
 
@@ -181,7 +181,7 @@ animate|String|动画的字符串内置的参数"in","out","none"
 keepAlive|Boolean|设置即将转跳的页面是否开启缓存(路由内也可完成相同设置)
 
 
-例：
+**例：**
 
 ```
 <div v-vhaRt="{push:'/xxx', animate:'in', keepAlive:true}"></div>
@@ -192,7 +192,7 @@ keepAlive|Boolean|设置即将转跳的页面是否开启缓存(路由内也可�
 <!-- ------------------------------------------- -->
 <section id="componentized">
 
-# [neo组件化命名规范](#componentized)
+# **[neo组件化命名规范](#componentized)**
 
 强烈推荐组合[neo组件化命名规范](https://github.com/mixingyu/Componentized-name-rules)开发
 

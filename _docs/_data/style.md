@@ -8,7 +8,7 @@
 
 <section id="Getting-Started">
 
-# **[Getting Started](#Getting-Started)**
+# [Getting Started](#Getting-Started)
 
 <br />
 
@@ -80,7 +80,7 @@ StatusBaroverlaysWebView: function () {
 <!-- ------------------------------------------- -->
 <section id="Authentication">
 
-# **[Authentication](#Authentication)**
+# [Authentication](#Authentication)
 
 222222222
 
@@ -144,7 +144,7 @@ StatusBaroverlaysWebView: function () {
 <!-- ------------------------------------------- -->
 <section id="Errors">
 
-# **[Errors](#Errors)**
+# [Errors](#Errors)
 
 333333333
 
