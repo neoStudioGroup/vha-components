@@ -11,7 +11,7 @@
 <p class="ui-r-note _bdc-warning">该组件支持tag，可以把它渲染成其它标签或组件。默认为div标签</p>
 
 <p>例如</p>
-<pre><code class="language-html">&lt;vha-view tag=&quot;span&quot;&gt; //将渲染成span
+<pre><code class="language-html">&lt;vha-view tag=&quot;span&quot;&gt; &lt;!-- 将渲染成span --&gt;
   &lt;vha-subview&gt;
   &lt;/vha-subview&gt;
 &lt;/vha-view&gt;
