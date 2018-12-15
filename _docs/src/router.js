@@ -7,6 +7,9 @@ import routerView from '@/pages/index/routerView.vue'
 import scrollView from '@/pages/index/scrollView.vue'
 import style from '@/pages/index/style.vue'
 import view from '@/pages/index/view.vue'
+import navBar from '@/pages/index/navBar.vue'
+import tabBar from '@/pages/index/tabBar.vue'
+import popup from '@/pages/index/popup.vue'
 
 
 Vue.use(Router)
@@ -24,6 +27,8 @@ export default new Router({
           path: '/guide',
           component: guide
         },
+        
+        // 基础 Base
         {
           path: '/routerView',
           component: routerView
@@ -39,8 +44,23 @@ export default new Router({
         {
           path: '/view',
           component: view
+        },
+        {
+          path: '/navBar',
+          component: navBar
+        },
+        {
+          path: '/tabBar',
+          component: tabBar
+        },
+        {
+          path: '/popup',
+          component: popup
         }
         
+        // 表单 Forms
+        
+        // 扩展 Expansion
         
       ]
     }

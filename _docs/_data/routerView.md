@@ -8,7 +8,7 @@
 
 <section id="routerView">
 
-# **[vha-routerview](#routerView)**
+# **[vha-routerview 路由视图](#routerView)**
 
 vha的路由基本只包含page页面的展示，可以在路由router.js里控制页面的缓存。
 

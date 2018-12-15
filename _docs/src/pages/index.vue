@@ -22,7 +22,7 @@
       box-shadow inset -10px 0 10px -10px rgba(0,0,0,.1)
       span
         margin-left 8px
-        font-size 1.6em
+        font-size 1.4em
     .ui-l-search
       input
         padding 13px

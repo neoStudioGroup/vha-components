@@ -35,7 +35,7 @@ return `<template>
   <div class="index_PG-${Markdown.name}">
 ${Markdown.HTML}
     <section id="lastSection" class="_df _jcsb">
-      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/${Markdown.name}.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-components/blob/master/_docs/_data/${Markdown.name}.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：${Markdown.time}</span>
     </section>
   </div>

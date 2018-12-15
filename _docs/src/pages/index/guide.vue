@@ -2,8 +2,7 @@
   <div class="index_PG-guide">
 <section id="intro">
 
-<h1><strong><a href="#intro">介绍</a></strong></h1>
-<p>##vha-components</p>
+<h1><strong><a href="#intro">vha-components 介绍</a></strong></h1>
 <p>基于vue开发的移动端组件库，为快速构建移动端“定制化”ui界面而生。</p>
 <p>特点是即可快速构建也可自由修改。</p>
 <p>如果你对界面有“定制化”的需求我推荐你使用它，如果有“快速构建”的需求我也推荐你使用它。</p>
@@ -191,7 +190,7 @@ border-radius-line(rpx(10))</code></pre></section>
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/guide.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-components/blob/master/_docs/_data/guide.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-12-14 15:55:47</span>
     </section>
   </div>

@@ -8,7 +8,7 @@
 
 <section id="view">
 
-# **[vha-view](#view)**
+# **[vha-view 视图区域](#view)**
 
 vha-view是css3盒子模型的抽象组件，并以极简的方式实现了自由网格、自由宫格，你可以使用它展示一切内容。
 

@@ -8,9 +8,7 @@
 
 <section id="intro">
 
-# **[介绍](#intro)**
-
-##vha-components
+# **[vha-components 介绍](#intro)**
 
 基于vue开发的移动端组件库，为快速构建移动端“定制化”ui界面而生。
 

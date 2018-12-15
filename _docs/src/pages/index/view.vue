@@ -2,7 +2,7 @@
   <div class="index_PG-view">
 <section id="view">
 
-<h1><strong><a href="#view">vha-view</a></strong></h1>
+<h1><strong><a href="#view">vha-view 视图区域</a></strong></h1>
 <p>vha-view是css3盒子模型的抽象组件，并以极简的方式实现了自由网格、自由宫格，你可以使用它展示一切内容。</p>
 <p>你也可以使用css3盒子组合使用它，下面是vha-view常见用法展示。</p>
 <p>更详细的用法请查阅css3盒子模型相关资料。</p>
@@ -90,21 +90,8 @@
 </tr>
 </tbody></table>
 </section>
-<!-- ------------------------------------------- -->
-<!-- <section id="Event"> -->
-
-<!-- # **[Event](#Event)**
-
-事件|参数|说明
--|-|-
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-networkState|String|网络连接类型 -->
-
-<!-- </section> -->
-<!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/view.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-components/blob/master/_docs/_data/view.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-12-15 15:10:25</span>
     </section>
   </div>

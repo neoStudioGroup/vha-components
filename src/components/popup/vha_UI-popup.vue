@@ -161,7 +161,7 @@ export default {
       document.body.removeChild(this.$el)
       this.$destroy()
     },
-    show: function (text) {
+    show: function () {
       // 如果设置过遮罩属性就把"设置过"设为真
       if (typeof this.mask.show != 'undefined') {this.mask._isSetShow = true}
       if (!this.mask._isSetShow) {this.mask.show = true}

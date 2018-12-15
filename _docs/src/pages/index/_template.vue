@@ -1,12 +1,8 @@
 <template>
-  <div class="index_PG-Getting-Started">
-<section id="Getting-Started">
+  <div class="index_PG-Getting">
+<section id="Getting">
 
-<h1><strong><a href="#Getting-Started">Getting Started</a></strong></h1>
-<br />
-
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
-
+<h1><strong><a href="#Getting">vha-Getting </a></strong></h1>
 <blockquote>
 <p>cordova plugin add cordova-plugin-chrome</p>
 </blockquote>
@@ -103,74 +99,81 @@
 }</code></pre>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Authentication">
+<section id="API">
 
-<h1><strong><a href="#Authentication">Authentication</a></strong></h1>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
-<p>222222222</p>
+<h1><strong><a href="#API">API</a></strong></h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>flex</td>
+<td>类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
+</tr>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>auto</td>
+<td>类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
+</tr>
+<tr>
+<td>include</td>
+<td>String</td>
+<td>-</td>
+<td>包含的缓存路由name，与router-view一致。</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>String</td>
+<td>-</td>
+<td>排除的缓存路由name，与router-view一致。</td>
+</tr>
+<tr>
+<td>max</td>
+<td>Number</td>
+<td>0</td>
+<td>最大缓存数</td>
+</tr>
+</tbody></table>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Errors">
+<section id="Event">
 
-<h1><strong><a href="#Errors">Errors</a></strong></h1>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
-<p>333333333</p>
+<h1><strong><a href="#Event">Event</a></strong></h1>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+</tbody></table>
 </section>
-<!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-components/blob/master/_docs/_data/Getting.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-12-15 15:10:25</span>
     </section>
   </div>

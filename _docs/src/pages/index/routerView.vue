@@ -2,7 +2,7 @@
   <div class="index_PG-routerView">
 <section id="routerView">
 
-<h1><strong><a href="#routerView">vha-routerview</a></strong></h1>
+<h1><strong><a href="#routerView">vha-routerview 路由视图</a></strong></h1>
 <p>vha的路由基本只包含page页面的展示，可以在路由router.js里控制页面的缓存。</p>
 <pre><code class="language-json">meta: {
   keepAlive: true
@@ -51,7 +51,7 @@
 </tbody></table>
 </section>
     <section id="lastSection" class="_df _jcsb">
-      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/routerView.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-components/blob/master/_docs/_data/routerView.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-12-15 15:10:25</span>
     </section>
   </div>
