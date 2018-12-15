@@ -22,10 +22,10 @@ module.exports = {
         ],
         postProcess(context) {
           // 在这里配置每个页面的标题
-          let tail = 'vha-components 文档'
+          let tail = ' - vha-components 组件文档'
           let titles = {
             '/': 'vha-components 组件文档',
-            '/guide': '开发指南 - ' + tail
+            '/guide': '开发指南' + tail
           }
           context.html = context.html.replace(
             /<title>[^<]*<\/title>/i,
