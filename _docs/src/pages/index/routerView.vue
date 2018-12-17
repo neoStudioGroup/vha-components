@@ -7,6 +7,13 @@
 <pre><code class="language-json">meta: {
   keepAlive: true
 }</code></pre>
+<p>默认路由页面动画根据路由层级自动判断，同级页面会出现不理想的效果。所以这里提供了一个强制指定页面动画的参数。</p>
+<pre><code class="language-json">meta: {
+  vhaAnime: {
+    in: &#39;in&#39;,
+    out: &#39;out&#39;
+  }
+}</code></pre>
 <p>如下是<a href="https://github.com/mixingyu/vha-template-tabs">vha-template-tabs</a>模板的路由逻辑</p>
 <img width="600" src="https://raw.githubusercontent.com/mixingyu/vha-template-tabs/master/README/router.png">
 

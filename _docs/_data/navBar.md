@@ -16,6 +16,17 @@
 <vha-navbar title="normal"></vha-navbar>
 ```
 
+标题和按钮参数需要在路由内配置
+
+```json
+meta: {
+  vhaNavbar: {
+    title: '路由标题',
+    sideButton: 'none' // 隐藏侧边按钮
+  }
+}
+```
+
 </section>
 <!-- ------------------------------------------- -->
 <section id="API">
@@ -26,6 +37,7 @@
 -|-|-|-
 type|String|normal|类型，可选值"none","base","normal"。
 color|String|-|颜色，可选值"none","success","info","warning","error","dark","calm","stable","light"。为空时根据type自行判断, none为强制清除颜色
+title|String|-|标题
 sideButton|String|both|侧边按钮，可选值"none","left","right","both"
 
 </section>

@@ -10,6 +10,12 @@
   &lt;vha-tab-item icon=&quot;eye&quot;&gt;发现&lt;/vha-tab-item&gt;
   &lt;vha-tab-item icon=&quot;user&quot;&gt;我的&lt;/vha-tab-item&gt;
 &lt;/vha-tabbar&gt;</code></pre>
+<p>路由内配置显示隐藏</p>
+<pre><code class="language-json">meta: {
+  vhaTabbar: {
+    show: false // 不在这个路由页内显示标签栏，默认一直显示。
+  }
+}</code></pre>
 </section>
 <!-- ------------------------------------------- -->
 <section id="API">

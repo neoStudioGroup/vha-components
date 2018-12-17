@@ -18,6 +18,17 @@ meta: {
 }
 ```
 
+默认路由页面动画根据路由层级自动判断，同级页面会出现不理想的效果。所以这里提供了一个强制指定页面动画的参数。
+
+```json
+meta: {
+  vhaAnime: {
+    in: 'in',
+    out: 'out'
+  }
+}
+```
+
 如下是[vha-template-tabs](https://github.com/mixingyu/vha-template-tabs)模板的路由逻辑
 
 <img width="600" src="https://raw.githubusercontent.com/mixingyu/vha-template-tabs/master/README/router.png">

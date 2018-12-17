@@ -5,6 +5,13 @@
 <h1><strong><a href="#navBar">vha-navbar 导航栏</a></strong></h1>
 <p>基础用法</p>
 <pre><code class="language-html">&lt;vha-navbar title=&quot;normal&quot;&gt;&lt;/vha-navbar&gt;</code></pre>
+<p>标题和按钮参数需要在路由内配置</p>
+<pre><code class="language-json">meta: {
+  vhaNavbar: {
+    title: &#39;路由标题&#39;,
+    sideButton: &#39;none&#39; // 隐藏侧边按钮
+  }
+}</code></pre>
 </section>
 <!-- ------------------------------------------- -->
 <section id="API">
@@ -30,6 +37,12 @@
 <td>String</td>
 <td>-</td>
 <td>颜色，可选值&quot;none&quot;,&quot;success&quot;,&quot;info&quot;,&quot;warning&quot;,&quot;error&quot;,&quot;dark&quot;,&quot;calm&quot;,&quot;stable&quot;,&quot;light&quot;。为空时根据type自行判断, none为强制清除颜色</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>-</td>
+<td>标题</td>
 </tr>
 <tr>
 <td>sideButton</td>
