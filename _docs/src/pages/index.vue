@@ -199,10 +199,12 @@
   <div class="_PG-index _df">
     <!-- UI组件-左侧列表 -->
     <div class="_UI-menu _df _fdc">
-      <div class="ui-l-title _df _aic _cl-fff" @click="$router.push('/')">
-        <i class="fa fa-mobile-phone fa-2x"></i>
-        <span class="_di">Components docs</span>
-      </div>
+      <a href="https://github.com/neoStudioGroup/vha" target="_blank">
+        <div class="ui-l-title _df _aic _cl-fff">
+          <i class="fa fa-mobile-phone fa-2x"></i>
+          <span class="_di">Components docs</span>
+        </div>
+      </a>
       <div class="ui-l-search">
         <input class="_reInput" placeholder="Search" />
       </div>
