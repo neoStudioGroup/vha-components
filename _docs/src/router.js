@@ -22,12 +22,12 @@ import checkbox from '@/pages/index/checkbox.vue';
 import slider from '@/pages/index/slider.vue';
 
 // 扩展 Expansion
-import swipe from '@/pages/index/swipe.vue'
-import badge from '@/pages/index/badge.vue'
-import dialog from '@/pages/index/dialog.vue'
-import actionSheet from '@/pages/index/actionSheet.vue'
-import toast from '@/pages/index/toast.vue'
-import popover from '@/pages/index/popover.vue'
+import swipe from '@/pages/index/swipe.vue';
+import badge from '@/pages/index/badge.vue';
+import dialog from '@/pages/index/dialog.vue';
+import actionSheet from '@/pages/index/actionSheet.vue';
+import toast from '@/pages/index/toast.vue';
+import popover from '@/pages/index/popover.vue';
 
 
 Vue.use(Router)

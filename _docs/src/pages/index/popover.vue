@@ -2,7 +2,7 @@
   <div class="index_PG-popover">
 <section id="popover">
 
-<h1><strong><a href="#popover">vha-popover </a></strong></h1>
+<h1><strong><a href="#popover">vha-popover 弹出气泡</a></strong></h1>
 <blockquote>
 <p>cordova plugin add cordova-plugin-chrome</p>
 </blockquote>
@@ -115,13 +115,13 @@
 <td>type</td>
 <td>String</td>
 <td>flex</td>
-<td>类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
+<td>样式类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
 </tr>
 <tr>
 <td>size</td>
 <td>String</td>
 <td>auto</td>
-<td>类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
+<td>样式类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
 </tr>
 <tr>
 <td>include</td>

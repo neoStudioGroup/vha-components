@@ -34,7 +34,7 @@
 <td>type</td>
 <td>String</td>
 <td>normal</td>
-<td>类型，可选值&quot;none&quot;,&quot;base&quot;,&quot;normal&quot;。</td>
+<td>样式类型，可选值&quot;none&quot;,&quot;base&quot;,&quot;normal&quot;。</td>
 </tr>
 <tr>
 <td>color</td>

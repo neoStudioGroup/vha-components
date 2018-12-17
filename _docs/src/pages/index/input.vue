@@ -2,101 +2,7 @@
   <div class="index_PG-input">
 <section id="input">
 
-<h1><strong><a href="#input">vha-input </a></strong></h1>
-<blockquote>
-<p>cordova plugin add cordova-plugin-chrome</p>
-</blockquote>
-<p><router-link to="/aaa">router-link-aaa</router-link></p>
-<p>Welcome to our API.</p>
-<p>This API document is designed for those interested in developing for our platform.</p>
-<p>This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.</p>
-<p>This API is still under development and will evolve.</p>
-<p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
-
-<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-info">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
-
-<h3><strong>事件 (Event)</strong></h3>
-<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
-
-<dl>
-  <dt>title</dt>
-  <dd>The title for the book</dd>
-  <dt>score</dt>
-  <dd>The book's score between 0 and 5</dd>
-</dl>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
-</tr>
-<tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
-</tr>
-<tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>OK</td>
-<td>Success</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Created</td>
-<td>Creation Successful</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>We could not process that action</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>We couldn’t authenticate you</td>
-</tr>
-</tbody></table>
-<pre><code class="language-javascript">StatusBaroverlaysWebView: function () {
-  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  if(this.overlaysWebViewtruefalse){
-    this.logText += &quot;设置 overlaysWebView = false&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = false
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }else{
-    this.logText += &quot;设置 overlaysWebView = true&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = true
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }
-}</code></pre>
+<h1><strong><a href="#input">vha-input 输入框</a></strong></h1>
 </section>
 <!-- ------------------------------------------- -->
 <section id="API">
@@ -112,63 +18,52 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>type</td>
+<td>vhaType</td>
 <td>String</td>
-<td>flex</td>
-<td>类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
+<td>normal</td>
+<td>样式类型，可选值&quot;none&quot;,&quot;normal&quot;。（无和带有基本的边框）</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>String</td>
+<td>input</td>
+<td>样式类型，可选值&quot;input&quot;,&quot;textarea&quot;。（单行多行）</td>
 </tr>
 <tr>
 <td>size</td>
 <td>String</td>
-<td>auto</td>
-<td>类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
+<td>-</td>
+<td>尺寸，可选值&quot;&quot;,&quot;full&quot;。（自动或撑满父元素）</td>
 </tr>
 <tr>
-<td>include</td>
+<td>autofocus</td>
+<td>Boolean</td>
+<td>-</td>
+<td>是否获取自动焦点（ios权限问题不会生效）</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否禁止</td>
+</tr>
+<tr>
+<td>icon</td>
 <td>String</td>
 <td>-</td>
-<td>包含的缓存路由name，与router-view一致。</td>
+<td>默认左侧的图标</td>
 </tr>
 <tr>
-<td>exclude</td>
+<td>iconRight</td>
 <td>String</td>
 <td>-</td>
-<td>排除的缓存路由name，与router-view一致。</td>
+<td>默认右侧的图标</td>
 </tr>
 <tr>
-<td>max</td>
-<td>Number</td>
-<td>0</td>
-<td>最大缓存数</td>
-</tr>
-</tbody></table>
-</section>
-<!-- ------------------------------------------- -->
-<section id="Event">
-
-<h1><strong><a href="#Event">Event</a></strong></h1>
-<table>
-<thead>
-<tr>
-<th>事件</th>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
-</tr>
-<tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
-</tr>
-<tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
+<td>noBorder</td>
+<td>Boolean</td>
+<td>-</td>
+<td>是否隐藏边框</td>
 </tr>
 </tbody></table>
 </section>

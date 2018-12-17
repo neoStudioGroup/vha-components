@@ -39,7 +39,7 @@ meta: {
 
 参数|类型|默认值|说明
 -|-|-|-
-type|String|normal|类型，可选值"none","base","normal"。
+type|String|normal|样式类型，可选值"none","base","normal"。
 color|String|-|颜色，可选值"none","success","info","warning","error","dark","calm","stable","light"。为空时根据type自行判断, none为强制清除颜色
 followMeta|Boolean|true|是否跟随路由自动点亮
 

@@ -86,8 +86,7 @@ export default {
         ].indexOf(value) > -1;
       }
     },
-    selectClass: String,
-    selectData: Array
+    selectClass: String
   },
   data() {
     return {

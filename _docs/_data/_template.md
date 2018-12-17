@@ -80,8 +80,8 @@ StatusBaroverlaysWebView: function () {
 
 参数|类型|默认值|说明
 -|-|-|-
-type|String|flex|类型，可选值"flex","grid"。
-size|String|auto|类型，可选值"auto","full"。(默认根据网页宽度自动适配)
+type|String|flex|样式类型，可选值"flex","grid"。
+size|String|auto|样式类型，可选值"auto","full"。(默认根据网页宽度自动适配)
 include|String|-|包含的缓存路由name，与router-view一致。
 exclude|String|-|排除的缓存路由name，与router-view一致。
 max|Number|0|最大缓存数

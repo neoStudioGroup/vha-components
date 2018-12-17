@@ -35,7 +35,7 @@
 <td>size</td>
 <td>String</td>
 <td>auto</td>
-<td>类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
+<td>样式类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
 </tr>
 <tr>
 <td>include</td>

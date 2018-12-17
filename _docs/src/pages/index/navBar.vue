@@ -14,6 +14,31 @@
 }</code></pre>
 </section>
 <!-- ------------------------------------------- -->
+<section id="SLOT">
+
+<h1><strong><a href="#SLOT">SLOT 插槽</a></strong></h1>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>leftBox</td>
+<td>左侧插槽</td>
+</tr>
+<tr>
+<td>titleBox</td>
+<td>标题插槽</td>
+</tr>
+<tr>
+<td>rightBox</td>
+<td>右侧插槽</td>
+</tr>
+</tbody></table>
+</section>
+<!-- ------------------------------------------- -->
 <section id="API">
 
 <h1><strong><a href="#API">API</a></strong></h1>
@@ -30,7 +55,7 @@
 <td>type</td>
 <td>String</td>
 <td>normal</td>
-<td>类型，可选值&quot;none&quot;,&quot;base&quot;,&quot;normal&quot;。</td>
+<td>样式类型，可选值&quot;none&quot;,&quot;base&quot;,&quot;normal&quot;。</td>
 </tr>
 <tr>
 <td>color</td>

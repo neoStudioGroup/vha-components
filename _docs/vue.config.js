@@ -26,10 +26,22 @@ module.exports = {
           '/view',
           '/navBar',
           '/tabBar',
-          '/popup'
+          '/popup',
           
+          '/button',
+          '/buttonGroup',
+          '/input',
+          '/switch',
+          '/radio',
+          '/checkbox',
+          '/slider',
           
-          
+          '/swipe',
+          '/badge',
+          '/dialog',
+          '/actionSheet',
+          '/toast',
+          '/popover'
         ],
         postProcess(context) {
           // 在这里配置每个页面的标题
@@ -44,10 +56,22 @@ module.exports = {
             '/view': 'vha-view 视图区域' + tail,
             '/navBar': 'vha-navbar 导航栏' + tail,
             '/tabBar': 'vha-tabbar 标签栏' + tail,
-            '/popup': 'vha-popup 弹出层' + tail
+            '/popup': 'vha-popup 弹出层' + tail,
             
+            '/button': 'vha-button 按钮' + tail,
+            '/buttonGroup': 'vha-buttongroup 按钮组' + tail,
+            '/input': 'vha-input 输入框' + tail,
+            '/switch': 'vha-switch 开关' + tail,
+            '/radio': 'vha-radio 单选框' + tail,
+            '/checkbox': 'vha-checkbox 多选框' + tail,
+            '/slider': 'vha-slider 滑块' + tail,
             
-            
+            '/swipe': 'vha-swipe 轮播' + tail,
+            '/badge': 'vha-badge 角标' + tail,
+            '/dialog': 'vha-dialog 对话框' + tail,
+            '/actionSheet': 'vha-actionsheet 上拉菜单' + tail,
+            '/toast': 'vha-toast 信息提示' + tail,
+            '/popover': 'vha-popover 弹出气泡' + tail
           }
           context.html = context.html.replace(
             /<title>[^<]*<\/title>/i,

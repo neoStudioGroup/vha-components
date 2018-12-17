@@ -122,7 +122,7 @@ export default new Vuex.Store({
 {text: '对话框', note: 'Dialog', noteClass: '', href: '/dialog', select: false, showItem: false, item: []},
 {text: '上拉菜单', note: 'Action Sheet', noteClass: '', href: '/actionSheet', select: false, showItem: false, item: []},
 {text: '信息提示', note: 'Toast', noteClass: '', href: '/toast', select: false, showItem: false, item: []},
-{text: '弹出气泡', note: 'Popover', noteClass: '', href: '/popover', select: false, showItem: false, item: []}
+// {text: '弹出气泡', note: 'Popover', noteClass: '', href: '/popover', select: false, showItem: false, item: []}
         ]
       }
     ]

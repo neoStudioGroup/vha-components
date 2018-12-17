@@ -38,7 +38,7 @@
 <td>type</td>
 <td>String</td>
 <td>flex</td>
-<td>类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
+<td>样式类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
 </tr>
 <tr>
 <td>gridLine</td>

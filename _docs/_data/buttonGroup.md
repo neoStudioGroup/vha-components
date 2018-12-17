@@ -10,66 +10,19 @@
 
 # **[vha-buttonGroup 按钮组](#buttonGroup)**
 
-> cordova plugin add cordova-plugin-chrome
-
-<router-link to="/aaa">router-link-aaa</router-link>
-
-Welcome to our API.
-
-This API document is designed for those interested in developing for our platform.
-
-This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.
-
-This API is still under development and will evolve.
-
-<p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
-
-<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-info">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
-
-### **事件 (Event)**
-
-<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
-
-<dl>
-  <dt>title</dt>
-  <dd>The title for the book</dd>
-  <dt>score</dt>
-  <dd>The book's score between 0 and 5</dd>
-</dl>
-
-参数|类型|说明
--|-|-
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-
-Code|Name|Description
--|-|-
-200|OK|Success
-201|Created|Creation Successful
-400|Bad Request|We could not process that action
-403|Forbidden|We couldn’t authenticate you
-
-```javascript
-StatusBaroverlaysWebView: function () {
-  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  if(this.overlaysWebViewtruefalse){
-    this.logText += "设置 overlaysWebView = false" + "\n"
-    this.overlaysWebViewtruefalse = false
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }else{
-    this.logText += "设置 overlaysWebView = true" + "\n"
-    this.overlaysWebViewtruefalse = true
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }
-}
+管理一组按钮状态的按钮组
+```html
+<vha-buttongroup v-model="selectData">
+  <vha-button groupNote="第一个">
+    按钮1
+  </vha-button>
+  <vha-button groupNote="第二个">
+    按钮2
+  </vha-button>
+  <vha-button groupNote="第三个">
+    按钮3
+  </vha-button>
+</vha-buttongroup>
 ```
 
 </section>
@@ -80,11 +33,10 @@ StatusBaroverlaysWebView: function () {
 
 参数|类型|默认值|说明
 -|-|-|-
-type|String|flex|类型，可选值"flex","grid"。
-size|String|auto|类型，可选值"auto","full"。(默认根据网页宽度自动适配)
-include|String|-|包含的缓存路由name，与router-view一致。
-exclude|String|-|排除的缓存路由name，与router-view一致。
-max|Number|0|最大缓存数
+value|Array|-|设置默认的选中状态
+groupStyle|String|none|内置组风格，可选值"ios","topline","bottomline"。
+selectMode|String|single|选择的模式，可选值"single","multiple"。（单选，多选）
+selectClass|String|-|被选择按钮附加的类名，默认根据风格自行判断。
 
 </section>
 <!-- ------------------------------------------- -->
@@ -92,10 +44,8 @@ max|Number|0|最大缓存数
 
 # **[Event](#Event)**
 
-事件|参数|说明
--|-|-
-networkState|String|网络连接类型
-networkState|String|网络连接类型
-networkState|String|网络连接类型
+<p class="ui-r-note _bdc-info">click</p>
+
+<p class="ui-r-return"><span>↪ 返回值：event, info</span> 点击事件返回的按钮参数</p>
 
 </section>

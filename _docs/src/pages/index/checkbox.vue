@@ -2,101 +2,33 @@
   <div class="index_PG-checkbox">
 <section id="checkbox">
 
-<h1><strong><a href="#checkbox">vha-checkbox </a></strong></h1>
-<blockquote>
-<p>cordova plugin add cordova-plugin-chrome</p>
-</blockquote>
-<p><router-link to="/aaa">router-link-aaa</router-link></p>
-<p>Welcome to our API.</p>
-<p>This API document is designed for those interested in developing for our platform.</p>
-<p>This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.</p>
-<p>This API is still under development and will evolve.</p>
-<p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
+<h1><strong><a href="#checkbox">vha-checkbox 多选框</a></strong></h1>
+<p>vha实现了原生checkbox的参数，事件，model绑定，所以像使用原生checkbox一样使用它吧。</p>
+</section>
+<!-- ------------------------------------------- -->
+<section id="SLOT">
 
-<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-info">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
-
-<h3><strong>事件 (Event)</strong></h3>
-<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
-<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
-<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
-
-<dl>
-  <dt>title</dt>
-  <dd>The title for the book</dd>
-  <dt>score</dt>
-  <dd>The book's score between 0 and 5</dd>
-</dl>
-
+<h1><strong><a href="#SLOT">SLOT 插槽</a></strong></h1>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
+<th>name</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
+<td>slotSelectContent</td>
+<td>选中时展示的插槽</td>
 </tr>
 <tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
+<td>slotUnselectContent</td>
+<td>未选中时展示的插槽</td>
 </tr>
 <tr>
-<td>networkState</td>
-<td>String</td>
-<td>网络连接类型</td>
+<td>content</td>
+<td>默认插槽：如果设置了上面的两个插槽将不会显示它，否则默认插槽也可以替换</td>
 </tr>
 </tbody></table>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>OK</td>
-<td>Success</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Created</td>
-<td>Creation Successful</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>We could not process that action</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>We couldn’t authenticate you</td>
-</tr>
-</tbody></table>
-<pre><code class="language-javascript">StatusBaroverlaysWebView: function () {
-  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  if(this.overlaysWebViewtruefalse){
-    this.logText += &quot;设置 overlaysWebView = false&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = false
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }else{
-    this.logText += &quot;设置 overlaysWebView = true&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = true
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }
-}</code></pre>
 </section>
 <!-- ------------------------------------------- -->
 <section id="API">
@@ -112,34 +44,46 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>type</td>
+<td>selectClass</td>
 <td>String</td>
-<td>flex</td>
-<td>类型，可选值&quot;flex&quot;,&quot;grid&quot;。</td>
+<td>action-select</td>
+<td>选中时应用的class</td>
 </tr>
 <tr>
-<td>size</td>
+<td>unSelectClass</td>
 <td>String</td>
-<td>auto</td>
-<td>类型，可选值&quot;auto&quot;,&quot;full&quot;。(默认根据网页宽度自动适配)</td>
+<td>action-unselect</td>
+<td>未选中时应用的class</td>
 </tr>
 <tr>
-<td>include</td>
+<td>color</td>
+<td>String</td>
+<td>info</td>
+<td>颜色，可选值&quot;none&quot;,&quot;success&quot;,&quot;info&quot;,&quot;warning&quot;,&quot;error&quot;,&quot;dark&quot;,&quot;calm&quot;,&quot;stable&quot;,&quot;light&quot;。none为强制清除颜色</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>String</td>
+<td>vha_icon-checkbox</td>
+<td>左侧的图标</td>
+</tr>
+<tr>
+<td>textLeft</td>
 <td>String</td>
 <td>-</td>
-<td>包含的缓存路由name，与router-view一致。</td>
+<td>图标左侧的文字</td>
 </tr>
 <tr>
-<td>exclude</td>
+<td>text</td>
 <td>String</td>
 <td>-</td>
-<td>排除的缓存路由name，与router-view一致。</td>
+<td>图标右侧的文字</td>
 </tr>
 <tr>
-<td>max</td>
-<td>Number</td>
-<td>0</td>
-<td>最大缓存数</td>
+<td>checked</td>
+<td>Boolean</td>
+<td>-</td>
+<td>是否选中</td>
 </tr>
 </tbody></table>
 </section>

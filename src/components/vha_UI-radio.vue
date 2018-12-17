@@ -77,7 +77,7 @@
         this.color === 'none' ? '' : 'color-' + this.color
       ]"
     >
-      <slot name="classContent">
+      <slot name="content">
         <span class="ui-r-c-tleft" v-if="textLeft">{{textLeft}}</span>
         <i :class="icon || 'vha_icon-radio'"></i>
         <span class="ui-r-c-tright" v-if="text">{{text}}</span>

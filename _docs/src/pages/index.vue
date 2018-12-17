@@ -120,7 +120,7 @@
         margin 0 0 20px 0
         border-collapse collapse
         td, th
-          border 1px solid #ccc
+          border 1px solid #ddd
           padding 10px
           font-size .9em
           text-align left
@@ -176,6 +176,7 @@
   //UI组件-侧边栏
   ._UI-sidebar
     padding 20px
+    border-left 1px solid #eee
     .ui-s-phone
       padding 90px 12px
       height 100%

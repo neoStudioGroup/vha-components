@@ -42,7 +42,7 @@ vha-view是css3盒子模型的抽象组件，并以极简的方式实现了自�
 
 参数|类型|默认值|说明
 -|-|-|-
-type|String|flex|类型，可选值"flex","grid"。
+type|String|flex|样式类型，可选值"flex","grid"。
 gridLine|Boolean|false|网格时是否自动画分割线(手动较为麻烦所以提供它)
 display|String|block|显示方式，可选值"block","inline"。设置display:flex 或 display:inline-flex
 axis|String|x|轴的方向，可选值"x","y"。
