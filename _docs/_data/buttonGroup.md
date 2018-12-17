@@ -8,7 +8,7 @@
 
 <section id="buttonGroup">
 
-# **[vha-buttonGroup ](#buttonGroup)**
+# **[vha-buttonGroup 按钮组](#buttonGroup)**
 
 > cordova plugin add cordova-plugin-chrome
 

@@ -8,7 +8,7 @@
 
 <section id="actionSheet">
 
-# **[vha-actionSheet ](#actionSheet)**
+# **[vha-actionSheet 上拉菜单](#actionSheet)**
 
 > cordova plugin add cordova-plugin-chrome
 

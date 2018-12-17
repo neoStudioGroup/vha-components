@@ -8,7 +8,7 @@
 
 <section id="slider">
 
-# **[vha-slider ](#slider)**
+# **[vha-slider 滑块](#slider)**
 
 > cordova plugin add cordova-plugin-chrome
 

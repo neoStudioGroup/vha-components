@@ -8,7 +8,7 @@
 
 <section id="input">
 
-# **[vha-input ](#input)**
+# **[vha-input 输入框](#input)**
 
 > cordova plugin add cordova-plugin-chrome
 

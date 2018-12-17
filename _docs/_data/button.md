@@ -8,7 +8,7 @@
 
 <section id="button">
 
-# **[vha-button ](#button)**
+# **[vha-button 按钮](#button)**
 
 > cordova plugin add cordova-plugin-chrome
 

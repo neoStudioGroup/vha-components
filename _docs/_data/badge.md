@@ -8,7 +8,7 @@
 
 <section id="badge">
 
-# **[vha-badge ](#badge)**
+# **[vha-badge 角标](#badge)**
 
 > cordova plugin add cordova-plugin-chrome
 

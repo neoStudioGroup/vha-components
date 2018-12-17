@@ -38,13 +38,13 @@ module.exports = {
             '/': 'vha-components 组件文档',
             '/guide': '开发指南' + tail,
             
-            '/routerView': '路由视图' + tail,
-            '/scrollView': '滚动视图' + tail,
-            '/style': '风格' + tail,
-            '/view': '视图区域' + tail,
-            '/navBar': '导航栏' + tail,
-            '/tabBar': '标签栏' + tail,
-            '/popup': '弹出层' + tail
+            '/routerView': 'vha-routerview 路由视图' + tail,
+            '/scrollView': 'vha-scrollview 滚动视图' + tail,
+            '/style': 'vha-style 风格' + tail,
+            '/view': 'vha-view 视图区域' + tail,
+            '/navBar': 'vha-navbar 导航栏' + tail,
+            '/tabBar': 'vha-tabbar 标签栏' + tail,
+            '/popup': 'vha-popup 弹出层' + tail
             
             
             

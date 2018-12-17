@@ -8,7 +8,7 @@
 
 <section id="swipe">
 
-# **[vha-swipe ](#swipe)**
+# **[vha-swipe 轮播](#swipe)**
 
 > cordova plugin add cordova-plugin-chrome
 

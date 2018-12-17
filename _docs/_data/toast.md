@@ -8,7 +8,7 @@
 
 <section id="toast">
 
-# **[vha-toast ](#toast)**
+# **[vha-toast 信息提示](#toast)**
 
 > cordova plugin add cordova-plugin-chrome
 

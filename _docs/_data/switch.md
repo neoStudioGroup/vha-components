@@ -8,7 +8,7 @@
 
 <section id="switch">
 
-# **[vha-switch ](#switch)**
+# **[vha-switch 开关](#switch)**
 
 > cordova plugin add cordova-plugin-chrome
 

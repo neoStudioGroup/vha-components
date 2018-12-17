@@ -8,7 +8,7 @@
 
 <section id="popover">
 
-# **[vha-popover ](#popover)**
+# **[vha-popover 弹出气泡](#popover)**
 
 > cordova plugin add cordova-plugin-chrome
 

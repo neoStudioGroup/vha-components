@@ -8,7 +8,7 @@
 
 <section id="dialog">
 
-# **[vha-dialog ](#dialog)**
+# **[vha-dialog 对话框](#dialog)**
 
 > cordova plugin add cordova-plugin-chrome
 

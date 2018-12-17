@@ -8,7 +8,7 @@
 
 <section id="checkbox">
 
-# **[vha-checkbox ](#checkbox)**
+# **[vha-checkbox 多选框](#checkbox)**
 
 > cordova plugin add cordova-plugin-chrome
 

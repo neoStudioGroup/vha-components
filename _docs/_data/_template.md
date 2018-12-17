@@ -8,7 +8,7 @@
 
 <section id="Getting">
 
-# **[vha-Getting ](#Getting)**
+# **[vha-Getting 快速开始](#Getting)**
 
 > cordova plugin add cordova-plugin-chrome
 
