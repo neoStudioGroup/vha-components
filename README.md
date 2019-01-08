@@ -20,9 +20,9 @@
 
 基于[Vue.js](https://vuejs.org/)的，强调定制化和实用性的，移动端UI组件库。[在线体验](https://neostudiogroup.com/vha-appDemo/) [vha-components中文文档](https://neostudiogroup.github.io/vha-components)
 
-## 如何使用
+## 如何使用 (方案一)
 
-添加npm包到项目.
+添加npm包到项目。或者直接下载添加到项目目录任意修改
 
 ```shell
 npm install vha-components --save
@@ -33,6 +33,7 @@ npm install vha-components --save
 ```javascript
 // import
 import Vue from 'vue'
+// import vhaComponents from '../vha-components' 直接下载添加到项目目录
 import vhaComponents from 'vha-components'
 Vue.use(vhaComponents)
 ```
@@ -44,6 +45,7 @@ module.exports = {
   css: {
     loaderOptions: {
       stylus: {
+        // import: [__dirname + '/vha-components/src/assets/stylus/method.styl'] 直接下载添加到项目目录
         import: ['~vha-components/src/assets/stylus/method.styl']
       }
     }
