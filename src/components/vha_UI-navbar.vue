@@ -281,8 +281,6 @@ export default {
             this.$nextTick(function () {
               this.temp_show = source.meta.vhaNavbar.show
             })
-          } else {
-            throw 0
           }
           
           this.new_Title = source.meta.vhaNavbar.title
@@ -296,10 +294,6 @@ export default {
           throw 0
         }
       } catch (error) {
-        this.$nextTick(function () {
-          this.temp_show = true
-        })
-        
         this.new_Title = source ? source.name : ''
         this.temp_sideButton = this.sideButton
       }
