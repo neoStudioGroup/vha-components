@@ -127,6 +127,7 @@ vhaNavbar_color($color, $backgroundColor, $backgroundActiveColor)
       'type-' + this.type,
       this.color === 'color-none' ? '' : 'color-' + this.temp_color,
     ]"
+    v-if="this.temp_show"
   >
     <slot>
       <vha-view>
@@ -228,6 +229,7 @@ export default {
   },
   data() {
     return {
+      temp_show: true,
       temp_color: '',
       transitionName: 'in',
       routeAction: true,
@@ -275,6 +277,14 @@ export default {
       // 获取路由navbar的标题和信息
       try {
         if (typeof source.meta.vhaNavbar != 'undefined') {
+          if (typeof source.meta.vhaNavbar.show != 'undefined') {
+            this.$nextTick(function () {
+              this.temp_show = source.meta.vhaNavbar.show
+            })
+          } else {
+            throw 0
+          }
+          
           this.new_Title = source.meta.vhaNavbar.title
           
           if (typeof source.meta.vhaNavbar.sideButton != 'undefined') {
@@ -286,6 +296,10 @@ export default {
           throw 0
         }
       } catch (error) {
+        this.$nextTick(function () {
+          this.temp_show = true
+        })
+        
         this.new_Title = source ? source.name : ''
         this.temp_sideButton = this.sideButton
       }

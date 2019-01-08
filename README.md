@@ -56,3 +56,9 @@ module.exports = {
 [完整的演示app](https://github.com/neoStudioGroup/vha-appDemo)
 
 [apk文件](https://github.com/neoStudioGroup/vha-appDemo/releases/download/0.0.2/vha-appDemo.apk)
+
+## 版本历史
+
+### **v0.8.34** 2016-11-28 
+---
+1.新增 - navbar路由控制显示隐藏
