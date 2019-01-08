@@ -281,6 +281,10 @@ export default {
             this.$nextTick(function () {
               this.temp_show = source.meta.vhaNavbar.show
             })
+          } else {
+            this.$nextTick(function () {
+              this.temp_show = true
+            })
           }
           
           this.new_Title = source.meta.vhaNavbar.title
