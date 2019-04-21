@@ -56,7 +56,7 @@
       <div class="ui-d-head">
         <p class="ui-d-h-title _oneEllipsis" v-if="title">{{title}}</p>
         <p class="ui-d-h-text" v-if="text">{{text}}</p>
-        <div class="ui-d-h-input" v-if="inputText"><vha-input v-model="inputTextValue" :placeholder="inputText" autofocus size="full"></vha-input></div>
+        <div class="ui-d-h-input" v-if="inputText"><vha-input v-model="inputTextValue" :placeholder="inputText" :maxlength="option.maxlength" autofocus size="full"></vha-input></div>
       </div>
       <vha-view type="grid" gridLine>
         <vha-subview v-for="(button, index) in option.buttons" :key="index">
@@ -83,6 +83,7 @@ export default {
       inputText: '',
       inputTextValue: '',
       option: {
+        maxlength: undefined,
         buttons: undefined,
         callback: undefined,
       }

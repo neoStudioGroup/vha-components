@@ -11,6 +11,8 @@
   .ui-t-i
     margin rpx(30)
     font-size rpx(60)
+  .ui-t-pre
+    white-space pre-wrap
 </style>
 <template>
   <vha-view 
@@ -19,7 +21,7 @@
     align="center"
   >
     <i class="ui-t-i" :class="option.icon" v-if="option.icon"></i>
-    <p>{{text}}</p>
+    <pre class="ui-t-pre">{{text}}</pre>
   </vha-view>
 </template>
 <script type="text/ecmascript-6">

@@ -16,6 +16,9 @@
   .ui-i-iright
     padding rpx(20)
     padding-left 0
+  input
+    text-align inherit
+    color inherit
   textarea
     border none
     resize none
@@ -51,9 +54,7 @@
 <template>
 
   <!-- 如果类型是none无, 就只渲染组件, 无图标 -->
-  <component 
-    v-if="this.vhaType === 'none'"
-    
+  <!-- <component 
     :is="tag"
     class="vha_UI-input" 
     :class="[
@@ -68,7 +69,40 @@
     
     :disabled="disabled"
   >
-  </component>
+  </component> -->
+  <input 
+    v-if="this.vhaType === 'none' && tag === 'input'"
+    
+    class="vha_UI-input" 
+    :class="[
+      'type-' + this.vhaType,
+      this.size ? 'size-' + this.size : '',
+      this.disabled ? 'state-disabled' : '',
+    ]"
+    
+    v-bind="$attrs"
+    :value="value"
+    v-on="inputListeners"
+    
+    :disabled="disabled"
+  >
+  <textarea 
+    v-else-if="this.vhaType === 'none' && tag === 'textarea'"
+    
+    class="vha_UI-input" 
+    :class="[
+      'type-' + this.vhaType,
+      this.size ? 'size-' + this.size : '',
+      this.disabled ? 'state-disabled' : '',
+    ]"
+    
+    v-bind="$attrs"
+    :value="value"
+    v-on="inputListeners"
+    
+    :disabled="disabled"
+  >
+  </textarea>
   
   <!-- 如果类型是normal正常, 就渲染完整的label和图标组件 -->
   <label 
@@ -83,6 +117,8 @@
     ]"
   >
     <i class="ui-i-ileft" :class="icon" v-if="icon"></i>
+    <!-- 
+    component bug不渲染input数值改为下面判断
     <component 
       :is="tag"
       
@@ -92,7 +128,26 @@
       
       :disabled="disabled"
     >
-    </component>
+    </component> -->
+    <input 
+      v-if="tag === 'input'"
+      
+      v-bind="$attrs"
+      :value="value"
+      v-on="inputListeners"
+      
+      :disabled="disabled"
+    >
+    <textarea 
+      v-if="tag === 'textarea'"
+      
+      v-bind="$attrs"
+      :value="value"
+      v-on="inputListeners"
+      
+      :disabled="disabled"
+    >
+    </textarea>
     <i class="ui-i-iright" :class="iconRight" v-if="iconRight"></i>
   </label>
 

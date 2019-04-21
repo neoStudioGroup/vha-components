@@ -12,7 +12,7 @@ import vhaView from "./components/vha_UI-view";
 import vhaNavbar from "./components/vha_UI-navbar";
 import vhaTabbar from "./components/vha_UI-tabbar";
   import vhaTabItem from "./components/vha_UI-tabitem";
-import { $vhaPopup } from './components/popup'
+import { $vhaGetPopups, $vhaPopup } from './components/popup'
 
 // 表单 Forms
 import vhaButton from "./components/vha_UI-button";
@@ -54,7 +54,8 @@ const vhaInstall = {
     Vue.component('vha-tabbar', vhaTabbar)
       Vue.component('vha-tab-item', vhaTabItem)
     Vue.prototype.$vhaPopup = $vhaPopup
-      
+    Vue.prototype.$vhaGetPopups = $vhaGetPopups
+
     // 表单 Forms
     Vue.component('vha-button', vhaButton)
     Vue.component('vha-buttongroup', vhaButtongroup)

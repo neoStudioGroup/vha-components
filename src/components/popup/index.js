@@ -5,6 +5,8 @@ import vhaDialog from './vha_UI-dialog'
 import vhaActionsheet from './vha_UI-actionsheet'
 import vhaPopover from './vha_UI-popover'
 
+let popups = []
+
 function _vhaPopup(mount) {
   let popupInstance = new Vue(vhaPopup).$mount()
   document.body.appendChild(popupInstance.$el)
@@ -12,9 +14,24 @@ function _vhaPopup(mount) {
   let subInstance = mount.$el ? mount : new Vue(mount).$mount()
   // 注: new Vue的时候就会调用mounted() 这时还没设置$parent 需在this.$nextTick内才能获取$parent
   subInstance.$parent = popupInstance
+  //如果this存在就把$store指向绑定
+  if (typeof this != 'undefined') {
+    subInstance.$store = this.$store
+  }
   popupInstance.$refs.content.appendChild(subInstance.$el)
   
+  popups.push(popupInstance)
   return popupInstance
+}
+
+function _vhaGetPopups() {
+  // 如果pupup已经设置关闭标记 就删除
+  popups.forEach((element, index) => {
+    if (element.$el.getAttribute("data-close") === 'true') {
+      popups.splice(index, 1)
+    }
+  })
+  return popups
 }
 
 // --------------------
@@ -81,6 +98,7 @@ let _vhaDialog  = {
     let _toastInst = creatDialog()
     _toastInst.title = title || '消息'
     _toastInst.inputText = text
+    _toastInst.option.maxlength = option.maxlength
     _toastInst.option.buttons = option.buttons || ['取消', '确定']
     _toastInst.option.callback = (id, value) => {
       if (!option.buttons) {
@@ -147,6 +165,7 @@ function _vhaPopover (option = {}) {
 // --------------------
 
 export const $vhaPopup = _vhaPopup
+export const $vhaGetPopups = _vhaGetPopups
 
 export const $vhaToast = _vhaToast
 export const $vhaDialog = _vhaDialog

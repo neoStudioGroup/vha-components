@@ -32,7 +32,15 @@
   .infinite-layer
     .label-loading
       margin-left rpx(10)
-    
+
+// UI组件 - 滚动视图 开启X滚动
+.vha_UI-scrollview.scrollX
+  overflow-x auto
+
+// UI组件 - 滚动视图 开启Y滚动
+.vha_UI-scrollview.scrollY
+  overflow-y auto
+
 // UI组件 - 滚动视图 状态-下拉中
 .vha_UI-scrollview.state-down
   .refresh-layer
@@ -63,6 +71,7 @@
   <div 
     class="vha_UI-scrollview"
     :class="{
+      'scrollY': scrollY,
       'state-down': (state === 0),
       'state-up': (state === 1),
       'state-refreshing': (state === 2)
@@ -121,6 +130,10 @@ export default {
     keepBottom: {
       type: Boolean,
       default: false
+    },
+    scrollY: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -233,7 +246,7 @@ export default {
       if (bottom < infiniteHeight) this.infinite()
     },
     handleScroll (event) {
-      // console.log(event.target.scrollTop)
+      this.$emit('scrollTop', event.target.scrollTop)
     }
   },
   mounted() {

@@ -173,6 +173,7 @@ export default {
       this.close()
     },
     close: function () {
+      this.$el.setAttribute("data-close","true")
       this.mask.show = false
       // 如果设置了默认自动销毁 就不调用隐藏内容
       if (this.option.autoDestroy) {
