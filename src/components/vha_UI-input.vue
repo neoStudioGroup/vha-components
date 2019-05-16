@@ -35,6 +35,7 @@
     padding rpx(10)
     width 100%
     height 100%
+    font-size inherit
 // ------------------------------
 // UI组件 - 输入框-尺寸-撑满(父)
 .vha_UI-input.size-full

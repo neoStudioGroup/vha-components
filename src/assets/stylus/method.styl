@@ -9,6 +9,9 @@ w-rpx($px)
 h-rpx($px)
   "calc(100vh - %s)" % rpx($px)
 
+f-rpx($base, $px)
+  ($px - $base) / ($base / 10) * 10 + 100 + '%'
+
 _border-line()
   position relative
   &::after
