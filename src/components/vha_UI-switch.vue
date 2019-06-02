@@ -4,8 +4,6 @@
 // UI组件 - 开关
 .vha_UI-switch
   position relative
-  width rpx(110)
-  height rpx(64)
   display inline-block
   >.ui-r-input
     display none
@@ -22,8 +20,6 @@
     &:before
       content ' '
       position absolute
-      width rpx(54)
-      height rpx(54)
       border-radius 50%
       background-color #fff
       box-shadow 0 2px 7px rgba(0,0,0,.35), 0 1px 1px rgba(0,0,0,.15)
@@ -33,6 +29,24 @@
   >.action-select
     &:before
       transform translate3d(rpx(50),0,0)
+
+// ------------------------------
+// UI组件 - 开关-尺寸-小
+.vha_UI-switch.size-small
+  width rpx(100)
+  height rpx(54)
+  >.ui-r-class
+    &:before
+      width rpx(44)
+      height rpx(44)
+// UI组件 - 开关-尺寸-正常
+.vha_UI-switch.size-normal
+  width rpx(110)
+  height rpx(64)
+  >.ui-r-class
+    &:before
+      width rpx(54)
+      height rpx(54)
 // ------------------------------
 vhaSwitch_color($color)
   >.action-select
@@ -60,7 +74,11 @@ vhaSwitch_color($color)
 <template>
   <label 
     class="vha_UI-switch" 
-    :class="['color-' + this.color]"
+    
+    :class="[
+      'size-' + this.size,
+      'color-' + this.color
+    ]"
   >
     <input 
       class="ui-r-input" 
@@ -90,6 +108,16 @@ export default {
     event: 'change'
   },
   props: {
+    size: {
+      type: String,
+      default: 'normal',
+      validator(value) {
+        return [
+          'small',
+          'normal'
+        ].indexOf(value) > -1;
+      }
+    },
     color: {
       type: String,
       default: 'info',
