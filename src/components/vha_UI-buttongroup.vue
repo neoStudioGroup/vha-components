@@ -117,6 +117,8 @@ export default {
         this.buttonState[this.changeStateEvent.id].id = this.changeStateEvent.id
         this.buttonState[this.changeStateEvent.id].note = this.changeStateEvent.note
         
+        this.$emit('switch', this.changeStateEvent.id)
+        
         // 触发事件
         this.$emit('click', this.changeStateEvent.event, {
           instance: this.buttonData[this.changeStateEvent.id],
