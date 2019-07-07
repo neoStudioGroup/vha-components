@@ -4,18 +4,34 @@
 .vha_UI-scrollview
   height 100%
   overflow-x hidden
-  overflow-y auto
+  overflow-y hidden
   background-color inherit
   -webkit-overflow-scrolling touch
   
   // 下拉刷新页, 上拉加载页
-  .refresh-layer, .infinite-layer
+  .refresh-layer
+    height rpx(80)
+    color #aaa
+    font-size rpx(26)
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+  .infinite-layer
     height rpx(80)
     color #aaa
     font-size rpx(26)
     display flex
     align-items center
     justify-content center
+    
+  .refresh-layer
+    .refresh-layer-note
+      margin-bottom rpx(8)
+    .refresh-layer-content
+      display flex
+      align-items center
+    
   // 下拉刷新页
   .refresh-layer
     margin-top rpx(-80)
@@ -32,7 +48,7 @@
   .infinite-layer
     .label-loading
       margin-left rpx(10)
-
+    
 // UI组件 - 滚动视图 开启X滚动
 .vha_UI-scrollview.scrollX
   overflow-x auto
@@ -66,6 +82,10 @@
       display none
       transition-duration 0ms
   
+// UI组件 - 滚动视图 处理错误 该区域禁止操作
+.vha_UI-scrollview.touch-action
+  touch-action none
+  
 </style>
 <template>
   <div 
@@ -74,7 +94,8 @@
       'scrollY': scrollY,
       'state-down': (state === 0),
       'state-up': (state === 1),
-      'state-refreshing': (state === 2)
+      'state-refreshing': (state === 2),
+      'touch-action': touchAction
     }"
     @touchstart="onRefresh ? touchStart($event) : undefined"
     @touchmove="onRefresh ? touchMove($event) : undefined"
@@ -90,13 +111,17 @@
         webkitTransform: 'translate3d(0, ' + top + 'px, 0)'
       }"
     >
-      <div class="refresh-layer" v-if="onRefresh">
+      <div class="refresh-layer" v-if="onRefresh" :style="{height: noteText ? vha_rpx(112) : '', marginTop: noteText && state != 2 ? vha_rpx(-112) : ''}">
+      <!-- <div class="refresh-layer" v-if="onRefresh" :style="{height: noteText ? vha_rpx(112) : ''}"> -->
+        <span class="refresh-layer-note" v-if="noteText">{{noteText}}</span> 
         <slot name="refresh">
-          <i class="vha_icon-loading vha_icon-anim-pulse"></i>
-          <i class="vha_icon-jiantou"></i>
-          <span class="label-down">下拉刷新</span>
-          <span class="label-up">释放刷新</span>
-          <span class="label-refresh">正在刷新..</span>
+          <div class="refresh-layer-content" :style="{marginBottom: noteText ? vha_rpx(22) : ''}">
+            <i class="vha_icon-loading vha_icon-anim-pulse"></i>
+            <i class="vha_icon-jiantou"></i>
+            <span class="label-down">下拉刷新</span>
+            <span class="label-up">释放刷新</span>
+            <span class="label-refresh">正在刷新..</span>
+          </div>
         </slot>
       </div>
       <slot></slot>
@@ -116,6 +141,10 @@ export default {
     offset: {
       type: Number,
       default: 44
+    },
+    noteText: {
+      type: String,
+      default: ''
     },
     onRefresh: {
       type: Function,
@@ -142,8 +171,11 @@ export default {
       state: 0, // 0:down, 1: up, 2: state-refreshing
       startY: 0,
       touching: false,
-      infiniteLoading: false
+      infiniteLoading: false,
+      touchAction: false
     }
+  },
+  watch: {
   },
   methods: {
     touchStart (e) {
@@ -151,6 +183,7 @@ export default {
       this.touching = true
     },
     mouseDown (e) {
+      this.touchAction = false
       this.startY = e.pageY
       this.touching = true
     },
@@ -159,7 +192,8 @@ export default {
         return
       }
       let diff = e.targetTouches[0].pageY - this.startY
-      if (diff > 0) e.preventDefault()
+      // if (diff > 0) e.preventDefault()
+      if (diff >= 0) this.touchAction = true
       this.top = Math.pow(diff, 0.8) + (this.state === 2 ? this.offset : 0)
 
       if (this.state === 2) { // in state-refreshing
@@ -176,7 +210,8 @@ export default {
         return
       }
       let diff = e.pageY - this.startY
-      if (diff > 0) e.preventDefault()
+      // if (diff > 0) e.preventDefault()
+      if (diff >= 0) this.touchAction = true
       this.top = Math.pow(diff, 0.8) + (this.state === 2 ? this.offset : 0)
 
       if (this.state === 2) { // in state-refreshing
@@ -189,6 +224,7 @@ export default {
       }
     },
     touchEnd (e) {
+      this.touchAction = false
       this.touching = false
       if (this.state === 2) { // in state-refreshing
         this.state = 2
