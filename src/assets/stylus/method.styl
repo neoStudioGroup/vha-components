@@ -6,8 +6,14 @@ rpx($px)
 w-rpx($px)
   "calc(100vw - %s)" % rpx($px)
 
+wc-rpx($px)
+  "calc(100% - %s)" % rpx($px)
+
 h-rpx($px)
   "calc(100vh - %s)" % rpx($px)
+
+hc-rpx($px)
+  "calc(100% - %s)" % rpx($px)
 
 f-rpx($base, $px)
   ($px - $base) / ($base / 10) * 10 + 100 + '%'
