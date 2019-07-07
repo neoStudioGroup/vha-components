@@ -99,6 +99,7 @@ let _vhaDialog  = {
     _toastInst.title = title || '消息'
     _toastInst.inputText = text
     _toastInst.inputTextValue = option.inputTextValue
+    _toastInst.option.textarea = option.textarea
     _toastInst.option.maxlength = option.maxlength
     _toastInst.option.buttons = option.buttons || ['取消', '确定']
     _toastInst.option.callback = (id, value) => {
