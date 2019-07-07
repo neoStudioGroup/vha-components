@@ -46,7 +46,7 @@ vhaBadge_Color($color, $backgroundColor)
       this.color ? 'color-' + this.color : ''
     ]"
   >
-    <span v-if="type === 'normal'">{{value > max ? max : value}}{{tag}}</span>
+    <span v-if="type === 'normal'">{{value > max ? max : value}}{{value > max ? tag : ''}}</span>
   </div>
 </template>
 <script type="text/ecmascript-6">
