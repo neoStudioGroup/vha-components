@@ -18,7 +18,7 @@
 
 ## 关于vha-components
 
-基于[Vue.js](https://vuejs.org/)的，强调定制化和实用性的，移动端UI组件库。[在线体验](https://neostudiogroup.com/vha-appDemo/) [vha-components中文文档](https://neostudiogroup.github.io/vha-components)
+基于[Vue.js](https://vuejs.org/)的，强调定制化和实用性的，移动端UI组件库。[在线体验](https://neostudiogroup.github.io/vha-appDemo) [vha-components中文文档](https://neostudiogroup.github.io/vha-components)
 
 ## 如何使用 (方案一)
 
