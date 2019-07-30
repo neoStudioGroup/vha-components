@@ -7,10 +7,10 @@
 // ------------------------------
 // UI组件 - 子视图-撑满视图
 .vha_UI-subview.full-height
-  max-height 100%
+  min-height 0 //需要flex为1时用0清除高度可达预期暂不明原因
   flex 1
 .vha_UI-subview.full-width
-  max-width 100%
+  min-width 0
   flex 1
 // ------------------------------
 // UI组件 - fle弹性百分比
