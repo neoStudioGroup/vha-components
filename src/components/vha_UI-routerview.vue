@@ -155,8 +155,10 @@ export default {
           if (temp_meta.keepAlivePosition) {
             let temp_scrollview = el.querySelectorAll('.vha_UI-scrollview')
             temp_meta.keepAlivePosition.forEach(element => {
-              temp_scrollview[element.id].scrollLeft = element.x
-              temp_scrollview[element.id].scrollTop = element.y
+              if (temp_scrollview[element.id]) {
+                temp_scrollview[element.id].scrollLeft = element.x
+                temp_scrollview[element.id].scrollTop = element.y
+              }
             })
           }
         }
