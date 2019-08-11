@@ -94,12 +94,14 @@ export default {
   name: 'vhaUIpopup',
   data() {
     return {
+      pageHeight: 0,
       callback: {
         show: undefined, 
         close: undefined, 
         destroy: undefined, 
       },
       option: {
+        targetEl: undefined,
         leavePointer: true,
         autoDestroy: true
       },
@@ -158,7 +160,11 @@ export default {
     },
     destroy: function () {
       this._call(this.callback.destroy)
-      document.body.removeChild(this.$el)
+      if (this.option.targetEl) {
+        this.option.targetEl.removeChild(this.$el)
+      } else {
+        document.body.removeChild(this.$el)
+      }
       this.$destroy()
     },
     show: function () {
@@ -183,6 +189,16 @@ export default {
       if (this.option.leavePointer) {this.$el.style.pointerEvents = 'none'}
       this._call(this.callback.close)
     }
+  },
+  created() {
+    this.pageHeight = document.documentElement.clientHeight
+    this._mounted = () => {
+      if (!this.option.targetEl) {
+        this.$el.style.height = `${this.pageHeight}px`
+      }
+    }
+  },
+  mounted() {
   }
 }
 </script>

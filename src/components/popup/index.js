@@ -7,9 +7,15 @@ import vhaPopover from './vha_UI-popover'
 
 let popups = []
 
-function _vhaPopup(mount) {
+function _vhaPopup(mount, targetEl) {
   let popupInstance = new Vue(vhaPopup).$mount()
-  document.body.appendChild(popupInstance.$el)
+  if (targetEl) {
+    popupInstance.option.targetEl = targetEl
+    targetEl.appendChild(popupInstance.$el)
+  } else {
+    document.body.appendChild(popupInstance.$el)
+  }
+  
   //如果实例存在就直接添加否则创建实例后添加
   let subInstance = mount.$el ? mount : new Vue(mount).$mount()
   // 注: new Vue的时候就会调用mounted() 这时还没设置$parent 需在this.$nextTick内才能获取$parent
@@ -19,6 +25,8 @@ function _vhaPopup(mount) {
     subInstance.$store = this.$store
   }
   popupInstance.$refs.content.appendChild(subInstance.$el)
+  //默认mounted在$mount创建时就已经被调用导致el获取失败，使用回调函数在代码执行完毕后再调用通知el可以使用
+  popupInstance._mounted()
   
   popups.push(popupInstance)
   return popupInstance
