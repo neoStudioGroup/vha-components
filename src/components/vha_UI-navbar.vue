@@ -256,7 +256,7 @@ export default {
           throw 0
         }
       } catch (e) {
-        this.$router.go(-1)
+        this.$vhaRt.go({value: -1, animate: 'out'})
       }
     },
     onRightButton: function () {
