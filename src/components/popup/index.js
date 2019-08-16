@@ -40,12 +40,16 @@ function _vhaPopup(mount, targetEl, pushPopup) {
 
 function _vhaGetPopups() {
   // 如果pupup已经设置关闭标记 就删除
-  popups.forEach((element, index) => {
-    if (element.$el.getAttribute("data-close") === 'true') {
-      popups.splice(index, 1)
+  let new_popups = []
+  for(let i = popups.length - 1; i >= 0; i--){
+    if (popups[i].$el.getAttribute("data-close") != 'true') {
+      new_popups.push(popups[i])
     }
-  })
-  return popups
+  }
+  if (new_popups.length === 0) {
+    popups = []
+  }
+  return new_popups.reverse()
 }
 
 // --------------------
