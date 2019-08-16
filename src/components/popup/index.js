@@ -7,7 +7,11 @@ import vhaPopover from './vha_UI-popover'
 
 let popups = []
 
-function _vhaPopup(mount, targetEl) {
+function _vhaPopup(mount, targetEl, pushPopup) {
+  if (pushPopup === undefined) {
+    pushPopup = true
+  }
+  
   let popupInstance = new Vue(vhaPopup).$mount()
   if (targetEl) {
     popupInstance.option.targetEl = targetEl
@@ -28,7 +32,9 @@ function _vhaPopup(mount, targetEl) {
   //默认mounted在$mount创建时就已经被调用导致el获取失败，使用回调函数在代码执行完毕后再调用通知el可以使用
   popupInstance._mounted()
   
-  popups.push(popupInstance)
+  if (pushPopup) {
+    popups.push(popupInstance)
+  }
   return popupInstance
 }
 
