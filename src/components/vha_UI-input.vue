@@ -19,6 +19,7 @@
   input
     text-align inherit
     color inherit
+    background-color inherit
   textarea
     border none
     resize none
