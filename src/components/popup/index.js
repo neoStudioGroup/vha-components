@@ -16,6 +16,7 @@ function _vhaPopup(mount, targetEl, pushPopup) {
   if (targetEl) {
     popupInstance.option.targetEl = targetEl
     targetEl.appendChild(popupInstance.$el)
+    popupInstance.$parent = targetEl
   } else {
     document.body.appendChild(popupInstance.$el)
   }
@@ -171,6 +172,7 @@ function _vhaToast (option = {}) {
   
   temp_toastInstance.option.pos = option.pos || 'center'
   temp_toastInstance.option.icon = option.icon || ''
+  temp_toastInstance.option.textAlign = option.textAlign || ''
   temp_toastInstance.option.duration = option.duration || 1500
   
   return temp_toastInstance

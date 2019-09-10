@@ -21,7 +21,7 @@
     align="center"
   >
     <i class="ui-t-i" :class="option.icon" v-if="option.icon"></i>
-    <pre class="ui-t-pre">{{text}}</pre>
+    <pre class="ui-t-pre" :style="{textAlign: option.textAlign}">{{text}}</pre>
   </vha-view>
 </template>
 <script type="text/ecmascript-6">
@@ -35,6 +35,7 @@ export default {
       option: {
         pos: 'center',
         icon: '', 
+        textAlign: '', 
         duration: 1500
       }
     }
