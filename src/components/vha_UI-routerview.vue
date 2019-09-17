@@ -130,45 +130,6 @@ export default {
     }
   },
   methods: {
-    savePosition: function (fromRoute) {
-      // 如果离开的路由页面设置了缓存, 就将下面每个vha_UI-scrollview的position记录到路由内
-      let temp_meta = fromRoute.meta
-      if (typeof temp_meta.keepAlive != 'undefined' && temp_meta.keepAlive) {
-        let temp_scrollview = this.$el.querySelectorAll('.vha_UI-scrollview')
-        let temp_els = []
-        
-        temp_scrollview.forEach((element, index) => {
-          if (element.scrollLeft + element.scrollTop > 0) {
-            temp_els.push({id:index , x: element.scrollLeft, y: element.scrollTop})
-          }
-        })
-        temp_meta.keepAlivePosition = temp_els
-      } else {
-        delete temp_meta.keepAlivePosition
-      }
-    },
-    setPosition: function (el, again) {
-      // 如果即将进入的路由页面设置了缓存, 就读取路由内position记录到每个vha_UI-scrollview
-      let temp_meta = this.$route.meta
-      if (typeof temp_meta.keepAlive != 'undefined' && temp_meta.keepAlive) {
-        if (typeof temp_meta.keepAlivePosition != 'undefined') {
-          if (temp_meta.keepAlivePosition) {
-            let temp_scrollview = el.querySelectorAll('.vha_UI-scrollview')
-            temp_meta.keepAlivePosition.forEach(element => {
-              if (temp_scrollview[element.id]) {
-                temp_scrollview[element.id].scrollLeft = element.x
-                temp_scrollview[element.id].scrollTop = element.y
-              }
-            })
-          }
-        }
-      }
-      if (again) {
-        setTimeout(() => {
-          this.setPosition(el)
-        }, 1)
-      }
-    },
     enter: function (el) {
       if (this.nextAnimate != 'none') {
         this.maskShow = true
@@ -176,8 +137,11 @@ export default {
       // 偶尔失效BUG, 可能与元素被删除有关
       // el.addEventListener("transitionend", () => {})
       
-      // 读取路由滚动条位置设置到元素
-      this.setPosition(el, true)
+      // 发送读取路由滚动条位置设置到元素事件
+      let temp_vhaRouterAnimateEnter = new CustomEvent('vha:RouterAnimateEnter', {
+        detail: el
+      })
+      window.dispatchEvent(temp_vhaRouterAnimateEnter)
       
       // 进入页面动画执行完毕
       utils.checkClass(el, '-enter-active').then(() => {
@@ -215,15 +179,11 @@ export default {
   },
   watch: {
     '$route': function (to, from) {
-      // 页面转跳前保存滚动条位置
-      this.savePosition(from)
-      
       // console.log('现在路由:',to.path.split('/')[1],'来自路由:',from.path.split('/')[1],'现在的动画:',this.transitionName)
       let toDepth = to.path.split('/').length
       let fromDepth = from.path.split('/').length
       // this.transitionName = to.path.split('/')[1] != "" ? 'in' : 'out'
       // this.transitionName = toDepth === fromDepth ? '' : toDepth < fromDepth ? 'navbarSlide-out' : 'navbarSlide-in'
-      
       
       // 默认根据路径自动判断
       let temp_nextAnimate = ''
