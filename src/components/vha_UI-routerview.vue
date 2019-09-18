@@ -31,44 +31,44 @@
   .ui-r-center.size-auto
     min-width 320px
     max-width 540px
+  
+  .vhaRouterviewAnimate-none-enter-active //进入路由-上层-进场 过程中保持的状态
+    transition all 0ms
+  .vhaRouterviewAnimate-none-leave-active //进入路由-下层-退场 过程中保持的状态
+    transition all 0ms
     
-    .vhaRouterviewAnimate-none-enter-active //进入路由-上层-进场 过程中保持的状态
-      transition all 0ms
-    .vhaRouterviewAnimate-none-leave-active //进入路由-下层-退场 过程中保持的状态
-      transition all 0ms
-      
-    .vhaRouterviewAnimate-in-enter-active //进入路由-上层-进场 过程中保持的状态
-      transition transform 400ms cubic-bezier(0,1,1,1)
-      // z-index 102
-    .vhaRouterviewAnimate-in-enter //进场开始值
-      transform translate(98vw, 0)
-    .vhaRouterviewAnimate-in-enter-to //进场目标值
-      // box-shadow 0 0 50px rgba(0,0,0,0.3)
-      transform translate(0, 0)
-    .vhaRouterviewAnimate-in-leave-active //进入路由-下层-退场 过程中保持的状态
-      transition transform 500ms cubic-bezier(.2,0,.6,1)
-      // z-index 100
-    .vhaRouterviewAnimate-in-leave //退场开始值
-      transform translate(0, 0)
-    .vhaRouterviewAnimate-in-leave-to //退场目标值
-      transform translate(rpx(-300), 0)
-    
-    .vhaRouterviewAnimate-out-enter-active //返回路由-上层-进场 过程中保持的状态
-      transition transform 300ms cubic-bezier(0,1,1,1)
-      // z-index 100
-    .vhaRouterviewAnimate-out-enter //进场开始值
-      transform translate(rpx(-300), 0)
-    .vhaRouterviewAnimate-out-enter-to //进场目标值
-      // box-shadow 0 0 50px rgba(0,0,0,0.3)
-      transform translate(0, 0)
-    .vhaRouterviewAnimate-out-leave-active //返回路由-下层-退场 过程中保持的状态
-      transition transform 400ms cubic-bezier(.2,0,.6,1)
-      // z-index 102
-      z-index 100
-    .vhaRouterviewAnimate-out-leave //退场开始值
-      transform translate(0, 0)
-    .vhaRouterviewAnimate-out-leave-to //退场目标值
-      transform translate(100vw, 0)
+  .vhaRouterviewAnimate-in-enter-active //进入路由-上层-进场 过程中保持的状态
+    transition transform 400ms cubic-bezier(0,1,1,1)
+    // z-index 102
+  .vhaRouterviewAnimate-in-enter //进场开始值
+    transform translate(98vw, 0)
+  .vhaRouterviewAnimate-in-enter-to //进场目标值
+    // box-shadow 0 0 50px rgba(0,0,0,0.3)
+    transform translate(0, 0)
+  .vhaRouterviewAnimate-in-leave-active //进入路由-下层-退场 过程中保持的状态
+    transition transform 500ms cubic-bezier(.2,0,.6,1)
+    // z-index 100
+  .vhaRouterviewAnimate-in-leave //退场开始值
+    transform translate(0, 0)
+  .vhaRouterviewAnimate-in-leave-to //退场目标值
+    transform translate(rpx(-300), 0)
+  
+  .vhaRouterviewAnimate-out-enter-active //返回路由-上层-进场 过程中保持的状态
+    transition transform 300ms cubic-bezier(0,1,1,1)
+    // z-index 100
+  .vhaRouterviewAnimate-out-enter //进场开始值
+    transform translate(rpx(-300), 0)
+  .vhaRouterviewAnimate-out-enter-to //进场目标值
+    // box-shadow 0 0 50px rgba(0,0,0,0.3)
+    transform translate(0, 0)
+  .vhaRouterviewAnimate-out-leave-active //返回路由-下层-退场 过程中保持的状态
+    transition transform 400ms cubic-bezier(.2,0,.6,1)
+    // z-index 102
+    z-index 100
+  .vhaRouterviewAnimate-out-leave //退场开始值
+    transform translate(0, 0)
+  .vhaRouterviewAnimate-out-leave-to //退场目标值
+    transform translate(100vw, 0)
 </style>
 <template>
   <div class="vha_UI-routerview">
