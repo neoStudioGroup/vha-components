@@ -3,7 +3,7 @@ import vhaEvent from './vhaEvent';
 const vhaRouter = {
   install(Vue, options) {
     
-    // js控制路由动画
+    // js控制路由动画 
     let router = {
       push: (ob) => {
         vhaEvent.Routerview(ob.animate)
