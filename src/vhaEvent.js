@@ -1,10 +1,11 @@
 const vhaEvent = {
-  App: (callFunc, value, keepAlive) => {
+  App: (callFunc, value, keepAlive, check) => {
     let temp_vhaAppEvent = new CustomEvent('vha:AppEvent', {
       detail: {
         callFunc: callFunc, 
         value: value, 
-        keepAlive: keepAlive
+        keepAlive: keepAlive,
+        check: check
       }
     })
     window.dispatchEvent(temp_vhaAppEvent)

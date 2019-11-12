@@ -121,10 +121,27 @@ export default {
       // console.log('vhaAppEvent：', event.detail)
       this.temp_keepAlive = event.detail.keepAlive
       
-      if (event.detail.callFunc === 'push') {
-        this.$router.push(event.detail.value)
-      } else if (event.detail.callFunc === 'go') {
-        this.$router.go(event.detail.value)
+      //如果检查路由等于真 则当前路由不能重复转跳
+      let isjump = true
+      if (event.detail.check) {
+        // 解析出纯路径
+        let toUrl = event.detail.value
+        if (toUrl.indexOf('?') != -1) {
+          toUrl = toUrl.split('?')[0]
+        }
+        
+        // 如果当前路由等于即将转跳路由就不转跳
+        if (this.$route.path === toUrl) {
+          isjump = false
+        }
+      }
+      
+      if (isjump) {
+        if (event.detail.callFunc === 'push') {
+          this.$router.push(event.detail.value)
+        } else if (event.detail.callFunc === 'go') {
+          this.$router.go(event.detail.value)
+        }
       }
     },
     vhaRouterAnimateEnter: function (event) {
