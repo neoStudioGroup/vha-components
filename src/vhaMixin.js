@@ -24,8 +24,14 @@ const vhaMixin = {
         vha_w_rpx: function (px) {
           return `calc(100vw - ${this.vha_rpx(px)})`
         },
+        vha_wc_rpx: function (px) {
+          return `calc(100% - ${this.vha_rpx(px)})`
+        },
         vha_h_rpx: function (px) {
           return `calc(100vh - ${this.vha_rpx(px)})`
+        },
+        vha_hc_rpx: function (px) {
+          return `calc(100% - ${this.vha_rpx(px)})`
         }
       },
       watch: {
