@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "highlight.js": "^9.13.0",
-    "marked": "^0.5.1",
+    "marked": "^1.1.1",
     "nprogress": "^0.2.0",
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.5.2",
