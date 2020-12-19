@@ -3,10 +3,10 @@
 @import "../assets/stylus/mixin.styl"
 // UI组件 - 按钮
 .vha_UI-button
-  >.ui-b-ileft
-    margin-right rpx(4)
-  >.ui-b-iright
-    margin-left rpx(4)
+  >.left-mr
+    margin-right rpx(6)
+  >.right-mr
+    margin-left rpx(6)
 // ------------------------------
 vhaButton_type()
   cursor pointer
@@ -206,9 +206,9 @@ vhaButton_effectColor($backgroundColor)
     :type="nativeType"
     :disabled="disabled"
   >
-    <i class="ui-b-ileft" :class="icon" v-if="icon"></i>
+    <i :class="['ui-b-ileft', icon, this.left_mr ? 'left-mr' : '']" v-if="icon"></i>
     <slot></slot>
-    <i class="ui-b-iright" :class="iconRight" v-if="iconRight"></i>
+    <i :class="['ui-b-iright', iconRight, this.right_mr ? 'right-mr' : '']" v-if="iconRight"></i>
   </button>
 </template>
 <script type="text/ecmascript-6">
@@ -282,6 +282,9 @@ export default {
       group_selectClass: '',
       temp_effect: '',
       temp_color: '',
+      
+      left_mr: true,
+      right_mr: true
     }
   },
   computed: {
@@ -337,6 +340,17 @@ export default {
         this.temp_color = this.color || 'calm'
         break
       }
+    }
+  },
+  mounted() {
+    if (this.$slots.default) {
+      if (!this.$slots.default[0].text) {
+        this.left_mr = false
+        this.right_mr = false
+      }
+    } else {
+      this.left_mr = false
+      this.right_mr = false
     }
   }
 }
