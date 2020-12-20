@@ -26,6 +26,9 @@
   <input 
     class="vha_UI-slider" 
     type="range"
+    v-bind:step="step"
+    v-bind:min="min"
+    v-bind:max="max"
     v-bind:value="value"
     v-on:input="$emit('input', $event.target.value)"
   >
@@ -34,6 +37,18 @@
 export default {
   name: 'vhaUIslider',
   props: {
+    step: {
+      type: Number,
+      default: 0
+    },
+    min: {
+      type: Number,
+      default: 0
+    },
+    max: {
+      type: Number,
+      default: 100
+    },
     value: null
   }
 }
