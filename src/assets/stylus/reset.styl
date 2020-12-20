@@ -91,7 +91,6 @@ li {
 // }
 
 // ----- 自定义
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -116,8 +115,11 @@ body, body a, body button, body media-switch, body:hover {
   cursor: url(../images/finger.png) 8 8,auto;
 }
 
-// ----- 尺寸
+img[src=""],img:not([src]){
+  opacity:0;
+}
 
+// ----- 尺寸
 html
   font-size (75 / (750 / 2)) * 100vw
   @media screen and (max-width: 320px) 
@@ -141,4 +143,3 @@ h5
   font-size rpx(30)
 h6
   font-size rpx(24)
-  
