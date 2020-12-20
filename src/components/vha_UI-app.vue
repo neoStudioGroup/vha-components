@@ -155,6 +155,24 @@ export default {
       this.savePosition(from)
     }
   },
+  created() {
+    // 监听visibilitychange事件 返回当前页面是否处于激活(显示)状态
+    let v = this
+    v.$emit('pageActive', true)
+    let hiddenProperty = 'hidden' in document ? 'hidden' : 
+      'webkitHidden' in document ? 'webkitHidden' : 
+      'mozHidden' in document ? 'mozHidden' : 
+      null;
+    let visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange')
+    let onVisibilityChange = function(){
+      if (!document[hiddenProperty]) {
+        v.$emit('pageActive', true)
+      }else{
+        v.$emit('pageActive', false)
+      }
+    }
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange)
+  },
   mounted() {
     // vhaAppEvent事件 处理路由转跳
     window.addEventListener('vha:AppEvent', this.vhaAppEvent)
