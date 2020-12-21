@@ -146,6 +146,7 @@ function _vhaActionsheet (option = {}) {
   temp_popupInstance.content.animate = 'bottom'
   
   temp_actionsheetInstance.option.title = option.title || '标题'
+  temp_actionsheetInstance.option.text = option.text || ''
   temp_actionsheetInstance.option.buttons = option.buttons || ['确定']
   temp_actionsheetInstance.option.cancelText = option.cancelText || '取消'
   
