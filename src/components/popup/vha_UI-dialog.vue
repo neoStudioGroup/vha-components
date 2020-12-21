@@ -131,6 +131,9 @@ export default {
     vhaInput
   },
   methods: {
+    changeText: function (text) {
+      this.inputTextValue = text
+    },
     leave: function (el) {
       this.$parent.$el.style.pointerEvents = 'none'
       utils.checkClass(el, '-leave-active').then(() => {
